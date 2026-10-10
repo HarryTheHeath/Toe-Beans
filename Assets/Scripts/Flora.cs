@@ -34,6 +34,14 @@ public class Flora : MonoBehaviour
         }
     }
 
+    [ProButton]
+    public void Randomise()
+    {
+        SetSR();
+        SetRandomScale();
+        SetRandomSprite();
+    }
+
 
     [ProButton]
     public void SetRandomSprite()
