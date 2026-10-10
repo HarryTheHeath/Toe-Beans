@@ -169,12 +169,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (9)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d1a20306c9f277b4f834b1a457a4edd0, type: 3}
+      objectReference: {fileID: 21300000, guid: fea7336557e878742ad21fda2c738a49, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -714,12 +714,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (7)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 32ad15d735e82614784271041273279d, type: 3}
+      objectReference: {fileID: 21300000, guid: a7827867ff035e242965cce5d86aa9e7, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -1397,12 +1397,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (8)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 32ad15d735e82614784271041273279d, type: 3}
+      objectReference: {fileID: 21300000, guid: a7827867ff035e242965cce5d86aa9e7, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -1462,12 +1462,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (5)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e1202864db371fa4281c53cf9c4e36e7, type: 3}
+      objectReference: {fileID: 21300000, guid: fea7336557e878742ad21fda2c738a49, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -1733,12 +1733,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (1)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 847d09dd3dff46843b4cf0be21f35ac3, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ad15d735e82614784271041273279d, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -2012,12 +2012,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (3)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0edbe5020af666543b569f6382827429, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ad15d735e82614784271041273279d, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -3443,12 +3443,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (4)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 847d09dd3dff46843b4cf0be21f35ac3, type: 3}
+      objectReference: {fileID: 21300000, guid: beb59a241717fc6469941d5cc6e48009, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -4444,12 +4444,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (6)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fea7336557e878742ad21fda2c738a49, type: 3}
+      objectReference: {fileID: 21300000, guid: d1a20306c9f277b4f834b1a457a4edd0, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -4580,12 +4580,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (2)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 32ad15d735e82614784271041273279d, type: 3}
+      objectReference: {fileID: 21300000, guid: a7827867ff035e242965cce5d86aa9e7, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -5303,12 +5303,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom (10)
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cc9626d63e67c5e4e8caed451dbb8d6e, type: 3}
+      objectReference: {fileID: 21300000, guid: 0edbe5020af666543b569f6382827429, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
@@ -5486,12 +5486,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447262153975405478, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Name
-      value: Mushroom
+      value: Fauna
       objectReference: {fileID: 0}
     - target: {fileID: 2530435666370227514, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: beb59a241717fc6469941d5cc6e48009, type: 3}
+      objectReference: {fileID: 21300000, guid: d1a20306c9f277b4f834b1a457a4edd0, type: 3}
     - target: {fileID: 4520483088982491524, guid: b6e125f5b32736548a84ecd951f7944c, type: 3}
       propertyPath: cam
       value: 
