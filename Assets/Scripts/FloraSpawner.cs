@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
 
@@ -19,9 +20,12 @@ public class FloraSpawner : MonoBehaviour
     [SerializeField] private Flora[] prefabs;
     [SerializeField] private float density = 2f;
 
+    [Header("Spacing")]
+    [SerializeField] private float minSpacing = 0.5f;
+    [SerializeField] private int maxPlacementAttempts = 20;
+
     [Header("Variation")]
     [SerializeField] private bool randomRotation = false;
-    [SerializeField] private bool randomiseOnGen;
 
     [ProButton]
     public void Generate()
@@ -37,47 +41,80 @@ public class FloraSpawner : MonoBehaviour
 
         int count = Mathf.RoundToInt(area * density);
 
+        List<Vector2> placedPositions = new();
+
         for (int i = 0; i < count; i++)
         {
-            Vector2 offset;
+            Vector2 offset = Vector2.zero;
+            bool validPositionFound = false;
 
-            if (shape == AreaShape.Circle)
+            for (int attempt = 0; attempt < maxPlacementAttempts; attempt++)
             {
-                offset = Random.insideUnitCircle * radius;
-            }
-            else
-            {
-                offset = new Vector2(
-                    Random.Range(-areaSize.x * 0.5f, areaSize.x * 0.5f),
-                    Random.Range(-areaSize.y * 0.5f, areaSize.y * 0.5f)
-                );
+                if (shape == AreaShape.Circle)
+                {
+                    offset = Random.insideUnitCircle * radius;
+                }
+                else
+                {
+                    offset = new Vector2(
+                        Random.Range(-areaSize.x * 0.5f, areaSize.x * 0.5f),
+                        Random.Range(-areaSize.y * 0.5f, areaSize.y * 0.5f)
+                    );
+                }
+
+                if (IsPositionValid(offset, placedPositions))
+                {
+                    validPositionFound = true;
+                    break;
+                }
             }
 
-            // XZ plane, fixed height
+            if (!validPositionFound)
+                continue;
+
+            placedPositions.Add(offset);
+
             Vector3 localPosition = new Vector3(
                 offset.x,
                 spawnHeight,
                 offset.y
             );
 
-            Vector3 worldPosition = transform.position + localPosition;
-
-            Flora prefab = prefabs[Random.Range(0, prefabs.Length)];
+            Vector3 worldPosition = transform.TransformPoint(localPosition);
 
             float rotationY = randomRotation
                 ? Random.Range(0f, 360f)
                 : 0f;
 
-            Flora instance = Instantiate(
-                prefab,
+            Instantiate(
+                prefabs[Random.Range(0, prefabs.Length)],
                 worldPosition,
                 Quaternion.Euler(0f, rotationY, 0f),
                 transform
             );
-
-            if (randomiseOnGen)
-                instance.Randomise();
         }
+
+        Randomise();
+    }
+
+    private bool IsPositionValid(
+        Vector2 candidate,
+        List<Vector2> existingPositions)
+    {
+        foreach (Vector2 position in existingPositions)
+        {
+            if ((candidate - position).sqrMagnitude < minSpacing * minSpacing)
+                return false;
+        }
+
+        return true;
+    }
+
+    [ProButton]
+    public void Randomise()
+    {
+        foreach (Flora flora in GetComponentsInChildren<Flora>())
+            flora.Randomise();
     }
 
     [ProButton]
@@ -92,15 +129,6 @@ public class FloraSpawner : MonoBehaviour
             else
                 DestroyImmediate(child);
         }
-    }
-
-    [ProButton]
-    public void Randomise()
-    {
-        Flora[] floraArray = GetComponentsInChildren<Flora>();
-
-        foreach (Flora flora in floraArray)
-            flora.Randomise();
     }
 
     private void OnDrawGizmosSelected()
@@ -118,14 +146,19 @@ public class FloraSpawner : MonoBehaviour
         else
         {
             const int segments = 64;
-            Vector3 centre = new Vector3(0f, spawnHeight, 0f);
+
+            Vector3 centre = new Vector3(
+                0f,
+                spawnHeight,
+                0f
+            );
 
             Vector3 previousPoint =
                 centre + new Vector3(radius, 0f, 0f);
 
             for (int i = 1; i <= segments; i++)
             {
-                float angle = (i / (float)segments) * Mathf.PI * 2f;
+                float angle = i * Mathf.PI * 2f / segments;
 
                 Vector3 nextPoint = centre + new Vector3(
                     Mathf.Cos(angle) * radius,
