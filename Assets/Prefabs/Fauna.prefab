@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 219043972879130061}
   - component: {fileID: 2530435666370227514}
   - component: {fileID: 4520483088982491524}
+  - component: {fileID: 5411337318762183737}
   m_Layer: 0
-  m_Name: Mushroom
+  m_Name: Fauna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,3 +102,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+--- !u!114 &5411337318762183737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447262153975405478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b566374cf52fb4ba7211283da641ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: fea7336557e878742ad21fda2c738a49, type: 3}
+  - {fileID: 21300000, guid: cc9626d63e67c5e4e8caed451dbb8d6e, type: 3}
+  - {fileID: 21300000, guid: 847d09dd3dff46843b4cf0be21f35ac3, type: 3}
+  - {fileID: 21300000, guid: 0edbe5020af666543b569f6382827429, type: 3}
+  - {fileID: 21300000, guid: a7827867ff035e242965cce5d86aa9e7, type: 3}
+  - {fileID: 21300000, guid: beb59a241717fc6469941d5cc6e48009, type: 3}
+  - {fileID: 21300000, guid: 32ad15d735e82614784271041273279d, type: 3}
+  - {fileID: 21300000, guid: e1202864db371fa4281c53cf9c4e36e7, type: 3}
+  spriteRenderer: {fileID: 0}
+  minScale: 0.075
+  maxScale: 0.125
