@@ -3,9 +3,13 @@ using com.cyborgAssets.inspectorButtonPro;
 
 public class Flora : MonoBehaviour
 {
+    [Header("Sprites")]
     [SerializeField] private Sprite[] sprites;
     [SerializeReference] private SpriteRenderer spriteRenderer;
 
+    [Header("Random Scale")]
+    [SerializeField] private float minScale = 0.075f;
+    [SerializeField] private float maxScale = 0.125f;
 
 
     private void Awake()
@@ -38,6 +42,18 @@ public class Flora : MonoBehaviour
         {
             SetSprite(Random.Range(0, sprites.Length));
         }
+    }
+
+    [ProButton]
+    public void SetRandomScale()
+    {
+        float scale = Random.Range(minScale, maxScale);
+        transform.localScale = Vector3.one * scale;
+    }
+
+    public void ResetSize()
+    {
+        transform.localScale = Vector3.one * 0.1f;
     }
 }
 
