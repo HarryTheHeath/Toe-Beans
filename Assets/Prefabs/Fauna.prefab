@@ -123,6 +123,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: beb59a241717fc6469941d5cc6e48009, type: 3}
   - {fileID: 21300000, guid: 32ad15d735e82614784271041273279d, type: 3}
   - {fileID: 21300000, guid: e1202864db371fa4281c53cf9c4e36e7, type: 3}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2530435666370227514}
+  billboard: {fileID: 4520483088982491524}
   minScale: 0.075
   maxScale: 0.125

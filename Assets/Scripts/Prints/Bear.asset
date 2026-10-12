@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bear
+  m_EditorClassIdentifier: Assembly-CSharp:Decals:AnimalDecalSet
+  left: {fileID: 2100000, guid: b9592a656f0bd2140b0f6a748090dd49, type: 2}
+  leftScuffed: {fileID: 2100000, guid: daca8d5938bd7d94eb8be2e57fe032a6, type: 2}
+  leftVeryScuffed: {fileID: 2100000, guid: 98002a1365c718a458fc8aaf94c26029, type: 2}
+  right: {fileID: 2100000, guid: 1749603b0da7f9243b8b8396bcb0b341, type: 2}
+  rightScuffed: {fileID: 2100000, guid: 2ffb3317937ab884cb96e775258dc630, type: 2}
+  rightVeryScuffed: {fileID: 2100000, guid: d6327bd7d0993fa4db6125cee2e905d0, type: 2}
+  baseOpacity: 1
+  scuffedOpacity: 1
+  veryScuffedOpacity: 1
+  opacityProperty: _BaseColor
