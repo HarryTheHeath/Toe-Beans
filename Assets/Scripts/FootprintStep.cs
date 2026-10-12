@@ -6,6 +6,7 @@ public class FootprintStep : MonoBehaviour
     [SerializeField] private bool firstStep;
     [SerializeField] private bool finalStep;
     [SerializeField] private GameObject nextPrint;
+    [SerializeField] private GameObject[] breadcrumbs;
     [SerializeField] private float triggerRadius = 2f;
     [SerializeField] private Vector3 spherePos;
 
@@ -18,6 +19,8 @@ public class FootprintStep : MonoBehaviour
         if (!finalStep)
         {
             nextPrint.SetActive(true);
+            foreach (var breadcrumb in breadcrumbs)
+                breadcrumb.gameObject.SetActive(false);
         }
         else
         {
