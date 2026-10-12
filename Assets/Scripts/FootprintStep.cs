@@ -1,11 +1,14 @@
+using System;
 using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
 
-public class FootprintStep : MonoBehaviour
+public class FootprintStep : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool firstStep;
     [SerializeField] private bool finalStep;
     [SerializeField] private GameObject nextPrint;
+    // White part of the print. Link in final footprint.
+    [SerializeField] private GameObject whitePrint;
     [SerializeField] private GameObject[] breadcrumbs;
     [SerializeField] private float triggerRadius = 2f;
     [SerializeField] private Vector3 spherePos;
@@ -14,17 +17,13 @@ public class FootprintStep : MonoBehaviour
 
 
     [ProButton]
-    private void Interact()
+    public void Interact()
     {
         if (!finalStep)
         {
             nextPrint.SetActive(true);
             foreach (var breadcrumb in breadcrumbs)
                 breadcrumb.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Woohoo");
         }
     }
 
@@ -34,9 +33,9 @@ public class FootprintStep : MonoBehaviour
             gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.gameObject.CompareTag("Player"))
-            Interact();
+        if (finalStep)
+            whitePrint.SetActive(true);
     }
 }
