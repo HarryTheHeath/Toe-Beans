@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 45433829}
   - component: {fileID: 45433831}
   m_Layer: 7
-  m_Name: Decal Projector (3)
+  m_Name: Footprint 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 0
   nextPrint: {fileID: 2102065255}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -317,6 +318,7 @@ GameObject:
   - component: {fileID: 68716363}
   - component: {fileID: 68716364}
   - component: {fileID: 68716365}
+  - component: {fileID: 68716366}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -464,6 +466,27 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1739524757}
+--- !u!65 &68716366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68716356}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &82237398
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,40 +583,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101505076}
-  - component: {fileID: 101505075}
   - component: {fileID: 101505077}
   - component: {fileID: 101505078}
+  - component: {fileID: 101505079}
   m_Layer: 7
-  m_Name: Decal Projector
+  m_Name: Footprint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &101505075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101505074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: daca8d5938bd7d94eb8be2e57fe032a6, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.981
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0, y: 0, z: 0.5}
-  m_Size: {x: 2, y: 2, z: 1}
-  m_FadeFactor: 0.667
 --- !u!4 &101505076
 Transform:
   m_ObjectHideFlags: 0
@@ -623,11 +622,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 1
   finalStep: 0
-  nextPrint: {fileID: 344809979}
+  nextPrint: {fileID: 867245396}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
---- !u!135 &101505078
+--- !u!114 &101505078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101505074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: daca8d5938bd7d94eb8be2e57fe032a6, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.981
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 2, y: 2, z: 1}
+  m_FadeFactor: 0.667
+--- !u!135 &101505079
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -646,8 +670,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0.7}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &204884740
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1020,7 @@ GameObject:
   - component: {fileID: 344809981}
   - component: {fileID: 344809983}
   m_Layer: 7
-  m_Name: Decal Projector (1)
+  m_Name: Footprint 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1032,6 +1056,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 0
   nextPrint: {fileID: 925551784}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -1681,7 +1706,7 @@ GameObject:
   - component: {fileID: 599927115}
   - component: {fileID: 599927114}
   m_Layer: 7
-  m_Name: Decal Projector (5)
+  m_Name: Footprint 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1738,6 +1763,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 0
   nextPrint: {fileID: 2092595763}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -1795,15 +1821,15 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 101505076}
-  - {fileID: 344809980}
   - {fileID: 867245397}
+  - {fileID: 344809980}
   - {fileID: 925551785}
   - {fileID: 45433828}
   - {fileID: 2102065256}
   - {fileID: 599927113}
   - {fileID: 2092595764}
-  - {fileID: 1608829856}
   - {fileID: 857786810}
+  - {fileID: 1608829856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &660279890
@@ -2517,7 +2543,7 @@ GameObject:
   - component: {fileID: 857786812}
   - component: {fileID: 857786811}
   m_Layer: 7
-  m_Name: Decal Projector (6)
+  m_Name: Footprint 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2532,7 +2558,7 @@ Transform:
   m_GameObject: {fileID: 857786809}
   serializedVersion: 2
   m_LocalRotation: {x: 0.27059805, y: -0.6532815, z: 0.6532815, w: 0.27059805}
-  m_LocalPosition: {x: -52.7, y: -0, z: -57.72}
+  m_LocalPosition: {x: -52.7, y: 0, z: -57.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2574,6 +2600,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 1
   nextPrint: {fileID: 0}
+  whitePrint: {fileID: 1608829855}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -2611,9 +2638,10 @@ GameObject:
   m_Component:
   - component: {fileID: 867245397}
   - component: {fileID: 867245399}
-  - component: {fileID: 867245398}
+  - component: {fileID: 867245401}
+  - component: {fileID: 867245402}
   m_Layer: 7
-  m_Name: Decal Projector (9)
+  m_Name: Footprint 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2628,33 +2656,12 @@ Transform:
   m_GameObject: {fileID: 867245396}
   serializedVersion: 2
   m_LocalRotation: {x: 0.27059805, y: -0.6532815, z: 0.6532815, w: 0.27059805}
-  m_LocalPosition: {x: -12.27, y: 0, z: -17.37}
+  m_LocalPosition: {x: -12.27, y: 0.279, z: -17.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 630629082}
   m_LocalEulerAnglesHint: {x: 90, y: -135, z: 0}
---- !u!135 &867245398
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867245396}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0.7}
 --- !u!114 &867245399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,6 +2686,125 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.5}
   m_Size: {x: 2, y: 2, z: 1}
   m_FadeFactor: 0.215
+--- !u!114 &867245401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867245396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f948468eda5c24d9da86eccfa98822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstStep: 0
+  finalStep: 0
+  nextPrint: {fileID: 344809979}
+  whitePrint: {fileID: 0}
+  breadcrumbs: []
+  triggerRadius: 2
+  spherePos: {x: 0, y: 0, z: 0}
+--- !u!135 &867245402
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867245396}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &905535131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905535134}
+  - component: {fileID: 905535133}
+  - component: {fileID: 905535132}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &905535132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905535131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &905535133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905535131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &905535134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905535131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925551784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,7 +2818,7 @@ GameObject:
   - component: {fileID: 925551786}
   - component: {fileID: 925551788}
   m_Layer: 7
-  m_Name: Decal Projector (2)
+  m_Name: Footprint 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2728,6 +2854,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 0
   nextPrint: {fileID: 45433827}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -4171,7 +4298,7 @@ GameObject:
   - component: {fileID: 1608829858}
   - component: {fileID: 1608829857}
   m_Layer: 7
-  m_Name: Decal Projector (8)
+  m_Name: Footprint 9 white
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4228,6 +4355,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 1
   nextPrint: {fileID: 0}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -5421,7 +5549,7 @@ GameObject:
   - component: {fileID: 2092595766}
   - component: {fileID: 2092595765}
   m_Layer: 7
-  m_Name: Decal Projector (7)
+  m_Name: Footprint 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5478,6 +5606,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 0
   nextPrint: {fileID: 857786809}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -5605,7 +5734,7 @@ GameObject:
   - component: {fileID: 2102065258}
   - component: {fileID: 2102065257}
   m_Layer: 7
-  m_Name: Decal Projector (4)
+  m_Name: Footprint 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5662,6 +5791,7 @@ MonoBehaviour:
   firstStep: 0
   finalStep: 0
   nextPrint: {fileID: 599927112}
+  whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: -0.7, z: 0}
@@ -6761,3 +6891,4 @@ SceneRoots:
   - {fileID: 477524438}
   - {fileID: 318555979034343416}
   - {fileID: 68716361}
+  - {fileID: 905535134}

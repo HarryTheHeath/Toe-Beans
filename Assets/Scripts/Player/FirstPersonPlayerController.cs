@@ -3,12 +3,10 @@ using UnityEngine.InputSystem;
 
 public class FirstPersonPlayerController : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] private float moveSpeed = 5f;
+    [Header("Movement")] [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
 
-    [Header("Look")]
-    [SerializeField] private float mouseSensitivity = 2f;
+    [Header("Look")] [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float maxLookAngle = 90f;
 
     private CharacterController controller;
@@ -19,6 +17,9 @@ public class FirstPersonPlayerController : MonoBehaviour
     private InputAction moveAction;
     private InputAction lookAction;
     private InputAction jumpAction;
+
+    InputAction interactAction;
+    private IInteractable currentInteractable;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class FirstPersonPlayerController : MonoBehaviour
         moveAction = playerMap.FindAction("Move");
         lookAction = playerMap.FindAction("Look");
         jumpAction = playerMap.FindAction("Jump");
-
+        interactAction = playerMap.FindAction("Interact");
 
     }
 
@@ -43,7 +44,9 @@ public class FirstPersonPlayerController : MonoBehaviour
 
         HandleMovement();
         HandleJump();
+        HandleInteract();
     }
+
     private void LateUpdate()
     {
         HandleLook();
@@ -84,5 +87,32 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         if (jumpAction.triggered && controller.isGrounded)
             velocity.y = jumpForce;
+    }
+
+    private void HandleInteract()
+    {
+        if (interactAction.triggered && controller.isGrounded)
+        {
+            currentInteractable?.Interact();
+        }
+    }
+    
+    // Keeping track of the current interactable //
+    // Beware: If there are several interactable objects nearby, the most recently collided will be current
+    
+    // On collision with an object, make it the current interactable
+    private void OnTriggerEnter(Collider other)
+    {
+        var interactable = other.GetComponentInParent<IInteractable>();
+        if (interactable != null)
+            currentInteractable = interactable;
+    }
+
+    // When leaving the current interactable, set current interactable to null 
+    private void OnTriggerExit(Collider other)
+    {
+        var interactable = other.GetComponentInParent<IInteractable>();
+        if (interactable != null && interactable == currentInteractable)
+            currentInteractable = null;
     }
 }
