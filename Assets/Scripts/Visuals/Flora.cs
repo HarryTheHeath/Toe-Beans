@@ -5,7 +5,8 @@ public class Flora : MonoBehaviour
 {
     [Header("Sprites")]
     [SerializeField] private Sprite[] sprites;
-    [SerializeReference] private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    public Billboard billboard;
 
     [Header("Random Scale")]
     [SerializeField] private float minScale = 0.075f;
