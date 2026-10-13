@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 0
   finalStep: 0
-  nextPrint: {fileID: 0}
+  nextPrint: {fileID: 2102065255}
   whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 0
   finalStep: 0
-  nextPrint: {fileID: 0}
+  nextPrint: {fileID: 925551784}
   whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 0
   finalStep: 0
-  nextPrint: {fileID: 0}
+  nextPrint: {fileID: 2092595763}
   whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
@@ -2828,9 +2828,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstStep: 0
-  finalStep: 0
+  finalStep: 1
   nextPrint: {fileID: 0}
-  whitePrint: {fileID: 0}
+  whitePrint: {fileID: 1608829855}
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
@@ -2940,7 +2940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 0
   finalStep: 0
-  nextPrint: {fileID: 0}
+  nextPrint: {fileID: 344809979}
   whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
@@ -3130,7 +3130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 0
   finalStep: 0
-  nextPrint: {fileID: 0}
+  nextPrint: {fileID: 45433827}
   whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
@@ -4439,7 +4439,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425811147}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -4453,7 +4453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478679145}
   - component: {fileID: 1478679147}
-  - component: {fileID: 1478679146}
+  - component: {fileID: 1478679148}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -4478,9 +4478,17 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1478679146
+--- !u!222 &1478679147
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478679144}
+  m_CullTransparentMesh: 1
+--- !u!114 &1478679148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4502,7 +4510,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: b5e01ae6065e3344cae52b3e669e7188, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4510,14 +4518,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1478679147
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478679144}
-  m_CullTransparentMesh: 1
 --- !u!1 &1482416151
 GameObject:
   m_ObjectHideFlags: 0
@@ -4902,14 +4902,13 @@ GameObject:
   - component: {fileID: 1608829859}
   - component: {fileID: 1608829858}
   - component: {fileID: 1608829857}
-  - component: {fileID: 1608829860}
   m_Layer: 7
   m_Name: Footprint 9 white
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1608829856
 Transform:
   m_ObjectHideFlags: 0
@@ -4982,25 +4981,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.5}
   m_Size: {x: 2, y: 2, z: 1}
   m_FadeFactor: 0.181
---- !u!114 &1608829860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608829855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afa313e3f256c8c4a9bf7403bf5731e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstStep: 0
-  finalStep: 1
-  nextPrint: {fileID: 0}
-  whitePrint: {fileID: 0}
-  breadcrumbs: []
-  triggerRadius: 2
-  spherePos: {x: 0, y: 0, z: 0}
 --- !u!1 &1633299582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5715,7 +5695,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869485041}
   m_Enabled: 1
-  m_Alpha: 0.5
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -6309,7 +6289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 0
   finalStep: 0
-  nextPrint: {fileID: 0}
+  nextPrint: {fileID: 857786809}
   whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
@@ -6611,7 +6591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStep: 0
   finalStep: 0
-  nextPrint: {fileID: 0}
+  nextPrint: {fileID: 599927112}
   whitePrint: {fileID: 0}
   breadcrumbs: []
   triggerRadius: 2
