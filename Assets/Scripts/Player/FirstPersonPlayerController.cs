@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,8 +21,12 @@ public class FirstPersonPlayerController : MonoBehaviour
 
     InputAction interactAction;
     private IInteractable currentInteractable;
-    
+
+    [Header("UI")]
     public CanvasGroup promptObject;
+    public TextMeshProUGUI promptTagTMP;
+    public TextMeshProUGUI promptActionTMP;
+
 
     private void Awake()
     {
@@ -39,7 +44,12 @@ public class FirstPersonPlayerController : MonoBehaviour
         jumpAction = playerMap.FindAction("Jump");
         interactAction = playerMap.FindAction("Interact");
 
+        promptTagTMP.text = string.Empty;
+        promptActionTMP.text = string.Empty;
+
+        promptObject.alpha = 0f;
     }
+
 
     private void Update()
     {
@@ -110,7 +120,11 @@ public class FirstPersonPlayerController : MonoBehaviour
         {
             currentInteractable = interactable;
             if (!currentInteractable.hasTriggered())
+            {
+                promptTagTMP.text = currentInteractable.promptTag();
+                promptActionTMP.text = currentInteractable.promptAction();
                 promptObject.alpha = 1;
+            }
         }
     }
 
@@ -121,6 +135,8 @@ public class FirstPersonPlayerController : MonoBehaviour
         if (interactable != null && interactable == currentInteractable)
         {
             currentInteractable = null;
+            promptTagTMP.text = "";
+            promptActionTMP.text = "";
             promptObject.alpha = 0;
         }
     }
