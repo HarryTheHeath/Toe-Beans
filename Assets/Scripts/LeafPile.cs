@@ -40,6 +40,10 @@ public class LeafPile : MonoBehaviour
     [Header("Organization")]
     public Transform parent;
 
+    [Header("Reveal")]
+    public ParticleSystem particles;
+    public Collider collider;
+
     [ProButton]
     public void Generate() => GenerateInternal();
 
@@ -318,5 +322,8 @@ public class LeafPile : MonoBehaviour
     private void Explode()
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        particles.Play();
+        collider.enabled = false;
+        enabled = false;
     }
 }
