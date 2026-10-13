@@ -13,6 +13,11 @@ public class FootprintStep : MonoBehaviour, IInteractable
     [SerializeField] private float triggerRadius = 2f;
     [SerializeField] private Vector3 spherePos;
 
+    [Header("UI")]
+    [SerializeField] private String uiPromptTag;
+    [SerializeField] private String uiPromptAction;
+
+
     private bool _hasTriggered = false;
 
 
@@ -40,9 +45,18 @@ public class FootprintStep : MonoBehaviour, IInteractable
         if (finalStep)
             whitePrint.SetActive(true);
     }
-
-    public bool hasTriggered()
+        public bool hasTriggered()
     {
         return _hasTriggered;
+    }
+
+    public string promptAction()
+    {
+        return uiPromptAction;
+    }
+
+    public string promptTag()
+    {
+        return uiPromptTag;
     }
 }

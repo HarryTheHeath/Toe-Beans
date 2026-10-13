@@ -317,6 +317,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1 &68716356
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +452,8 @@ MonoBehaviour:
   mouseSensitivity: 2
   maxLookAngle: 90
   promptObject: {fileID: 1425811149}
+  promptTagTMP: {fileID: 1168663372}
+  promptActionTMP: {fileID: 294976024}
 --- !u!114 &68716365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +818,7 @@ GameObject:
   - component: {fileID: 294976025}
   - component: {fileID: 294976024}
   m_Layer: 5
-  m_Name: Prompt (1)
+  m_Name: Prompt Action
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1172,6 +1176,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1 &372300872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,6 +1990,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1 &630629080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,6 +2842,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: Bear Print
+  uiPromptAction: investigate!
 --- !u!1 &867245396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +2955,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1 &905535131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,6 +3147,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1 &971202480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3802,7 +3816,7 @@ GameObject:
   - component: {fileID: 1168663373}
   - component: {fileID: 1168663372}
   m_Layer: 5
-  m_Name: Prompt
+  m_Name: Prompt Tag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4629,6 +4643,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1 &1565189489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,6 +6310,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1 &2093178742
 GameObject:
   m_ObjectHideFlags: 0
@@ -6596,6 +6614,8 @@ MonoBehaviour:
   breadcrumbs: []
   triggerRadius: 2
   spherePos: {x: 0, y: 0, z: 0}
+  uiPromptTag: ??? Print
+  uiPromptAction: track
 --- !u!1001 &318555979034343416
 PrefabInstance:
   m_ObjectHideFlags: 0
