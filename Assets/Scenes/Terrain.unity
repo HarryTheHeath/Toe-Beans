@@ -11564,6 +11564,7 @@ GameObject:
   - component: {fileID: 195239783}
   - component: {fileID: 195239782}
   - component: {fileID: 195239786}
+  - component: {fileID: 195239787}
   m_Layer: 0
   m_Name: Flag Post
   m_TagString: Untagged
@@ -11686,6 +11687,7 @@ MonoBehaviour:
   yOnly: 1
   playOnStart: 0
   startDelay: 0
+  raised: 0
   duration: 1
   curve:
     serializedVersion: 2
@@ -11715,6 +11717,30 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  uiPromptTag: Flag
+  uiPromptActionNotRaised: raise
+  uiPromptActionRaised: lower
+--- !u!65 &195239787
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195239781}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2, z: 10}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!4 &197034472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5932551790872718373, guid: b8ac6073f720b394b8228478bc297a18, type: 3}

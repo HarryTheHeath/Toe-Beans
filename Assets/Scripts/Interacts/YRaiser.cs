@@ -1,10 +1,11 @@
 using com.cyborgAssets.inspectorButtonPro;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 [AddComponentMenu("Tweens/Raise On Y")]
-public class Yraiser : MonoBehaviour
+public class Yraiser : MonoBehaviour, IInteractable
 {
     [Header("Source / Target")]
     public bool captureStartOnStart;
@@ -25,6 +26,7 @@ public class Yraiser : MonoBehaviour
     public bool playOnStart = false;
 
     public float startDelay = 0f;
+    public bool raised;
 
     [Header("Timing & Curve")]
     public float duration = 1f;
@@ -34,9 +36,16 @@ public class Yraiser : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent onComplete;
-
+    private bool _inProgress;
     private Coroutine _running;
     private Vector3 _capturedStartPos;
+
+
+    [Header("UI")]
+    [SerializeField] private String uiPromptTag;
+    [SerializeField] private String uiPromptActionNotRaised;
+    [SerializeField] private String uiPromptActionRaised;
+
 
     private void Start()
     {
@@ -58,6 +67,8 @@ public class Yraiser : MonoBehaviour
 
         if (playOnStart)
             StartRaise();
+
+        _inProgress = false;
     }
 
 
@@ -71,13 +82,13 @@ public class Yraiser : MonoBehaviour
             _capturedStartPos = useLocalPosition ? target.transform.localPosition : target.transform.position;
 
         if (_running != null) StopCoroutine(_running);
-        _running = StartCoroutine(RaiseCoroutine(_capturedStartPos, endPosition, false, false));
+        _running = StartCoroutine(RaiseCoroutine(_capturedStartPos, endPosition, false, false, true));
     }
 
-    public void StartRaiseFrom(Vector3 from, Vector3 to)
+    public void StartRaiseFrom(Vector3 from, Vector3 to, bool raising)
     {
         if (_running != null) StopCoroutine(_running);
-        _running = StartCoroutine(RaiseCoroutine(from, to, false, false));
+        _running = StartCoroutine(RaiseCoroutine(from, to, false, false, raising));
     }
 
     [ProButton]
@@ -90,11 +101,13 @@ public class Yraiser : MonoBehaviour
             sr.enabled = true;
 
         if (_running != null) StopCoroutine(_running);
-        _running = StartCoroutine(RaiseCoroutine(currentPos, targetStartPos, true, toggleSR));
+        _running = StartCoroutine(RaiseCoroutine(currentPos, targetStartPos, true, toggleSR, false));
     }
 
-    private IEnumerator RaiseCoroutine(Vector3 from, Vector3 to, bool reverseCurve, bool disableAtEnd)
+    private IEnumerator RaiseCoroutine(Vector3 from, Vector3 to, bool reverseCurve, bool disableAtEnd, bool raising)
     {
+        _inProgress = true;
+
         if (startDelay > 0f)
         {
             if (useUnscaledTime)
@@ -124,6 +137,11 @@ public class Yraiser : MonoBehaviour
                 pos = Vector3.LerpUnclamped(from, to, eval);
             }
 
+            if (raising)
+                raised = true; 
+            else 
+                raised = false;
+
             ApplyPosition(pos);
             yield return null;
         }
@@ -135,6 +153,7 @@ public class Yraiser : MonoBehaviour
         if (disableAtEnd && sr != null)
             sr.enabled = false;
 
+        _inProgress = false;
         onComplete?.Invoke();
     }
 
@@ -154,5 +173,32 @@ public class Yraiser : MonoBehaviour
             if (captureStartOnStart)
                 _capturedStartPos = useLocalPosition ? target.transform.localPosition : target.transform.position;
         }
+    }
+
+    public void Interact()
+    {
+        if (_inProgress) return;
+        if (!raised)
+            StartRaise();
+        else
+            ResetToStart();
+    }
+
+    public bool hasTriggered()
+    {
+        return false;
+    }
+
+    public string promptTag()
+    {
+        return uiPromptTag;
+    }
+
+    public string promptAction()
+    {
+        if (raised)
+            return uiPromptActionRaised;
+        else
+            return uiPromptActionNotRaised;
     }
 }
