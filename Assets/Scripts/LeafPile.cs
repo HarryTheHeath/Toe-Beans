@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using com.cyborgAssets.inspectorButtonPro;
+using System;
+using Random = UnityEngine.Random;
+using Object = UnityEngine.Object;
+using System.Collections;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -8,7 +12,7 @@ using UnityEditor.SceneManagement;
 #endif
 
 [ExecuteAlways]
-public class LeafPile : MonoBehaviour
+public class LeafPile : MonoBehaviour, IInteractable
 {
     [Header("Sphere")]
     public Transform sphereCenter;    public float radius = 1f;
@@ -43,12 +47,26 @@ public class LeafPile : MonoBehaviour
     [Header("Reveal")]
     public ParticleSystem particles;
     public Collider collider;
+    private bool _hasTriggered;
+    public GameObject reveal;
+    public float waitTime;
+    public Yraiser yraiser;
+    
+
+    [Header("UI")]
+    [SerializeField] private String uiPromptTag;
+    [SerializeField] private String uiPromptAction;
 
     [ProButton]
     public void Generate() => GenerateInternal();
 
     [ProButton]
     public void Clear() => ClearInternal();
+
+    private void Awake()
+    {
+        reveal.SetActive(false);
+    }
 
     void Reset()
     {
@@ -172,14 +190,14 @@ public class LeafPile : MonoBehaviour
 
                     tangent.Normalize();
 
-                    float tilt = Random.Range(-maxTiltDegrees, maxTiltDegrees);
+                    float tilt = UnityEngine.Random.Range(-maxTiltDegrees, maxTiltDegrees);
                     finalRot = Quaternion.AngleAxis(tilt, tangent) * finalRot;
                 }
 
                 inst.transform.position = spawnPos;
                 inst.transform.rotation = finalRot;
 
-                float s = Random.Range(0.8f, 1.2f);
+                float s = UnityEngine.Random.Range(0.8f, 1.2f);
                 inst.transform.localScale = new Vector3(s, s, s);
 
                 placed.Add(spawnPos);
@@ -216,7 +234,7 @@ public class LeafPile : MonoBehaviour
             core.name = coreName;
 
 #if UNITY_EDITOR
-            Object.DestroyImmediate(core.GetComponent<Collider>());
+            UnityEngine.Object.DestroyImmediate(core.GetComponent<Collider>());
 #else
             Destroy(core.GetComponent<Collider>());
 #endif
@@ -313,17 +331,42 @@ public class LeafPile : MonoBehaviour
         Gizmos.matrix = Matrix4x4.identity;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-            Explode();
-    }
-
     private void Explode()
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         particles.Play();
         collider.enabled = false;
+        if (!_hasTriggered)
+            StartCoroutine(Reveal());
+    }
+
+    private IEnumerator Reveal()
+    {
+        _hasTriggered = true;
+        yield return new WaitForSeconds(waitTime);
+        reveal.SetActive(true);
+        yield return new WaitForSeconds(waitTime);
+        yraiser.Interact();
         enabled = false;
+    }
+
+    public void Interact()
+    {
+        Explode();
+    }
+
+    public bool hasTriggered()
+    {
+        return _hasTriggered;
+    }
+
+    public string promptTag()
+    {
+        return uiPromptTag;
+    }
+
+    public string promptAction()
+    {
+        return uiPromptAction;
     }
 }

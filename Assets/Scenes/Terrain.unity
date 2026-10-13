@@ -26549,7 +26549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &463950642
 Transform:
   m_ObjectHideFlags: 0
@@ -26559,7 +26559,7 @@ Transform:
   m_GameObject: {fileID: 463950641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.304, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -96553,6 +96553,8 @@ GameObject:
   - component: {fileID: 1717215519}
   - component: {fileID: 1717215518}
   - component: {fileID: 1717215522}
+  - component: {fileID: 1717215523}
+  - component: {fileID: 1717215524}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -96575,7 +96577,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -96688,6 +96690,88 @@ MonoBehaviour:
   parent: {fileID: 1061654116}
   particles: {fileID: 1855064415}
   collider: {fileID: 1717215518}
+  reveal: {fileID: 463950641}
+  waitTime: 0.25
+  yraiser: {fileID: 1717215524}
+  uiPromptTag: leaf pile
+  uiPromptAction: kick
+--- !u!135 &1717215523
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717215517}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1717215524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717215517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72408397d58c45545810f82817dbe248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  captureStartOnStart: 0
+  setAtStartOnStart: 1
+  toggleSR: 0
+  target: {fileID: 463950641}
+  sr: {fileID: 463950645}
+  startPosition: {x: 0, y: -0.1, z: 0}
+  endPosition: {x: 0, y: 0.3, z: 0}
+  useLocalPosition: 1
+  yOnly: 1
+  playOnStart: 0
+  startDelay: 0
+  raised: 0
+  duration: 1.5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useUnscaledTime: 0
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  uiPromptTag: 
+  uiPromptActionNotRaised: 
+  uiPromptActionRaised: 
 --- !u!1001 &1719142537
 PrefabInstance:
   m_ObjectHideFlags: 0
