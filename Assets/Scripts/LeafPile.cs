@@ -11,50 +11,33 @@ using UnityEditor.SceneManagement;
 public class LeafPile : MonoBehaviour
 {
     [Header("Sphere")]
-    [Tooltip("Center transform of the sphere. If null, this GameObject transform is used.")]
-    public Transform sphereCenter;
-    [Tooltip("Radius of the sphere surface where leaves sit (world units).")]
-    public float radius = 1f;
+    public Transform sphereCenter;    public float radius = 1f;
 
     [Header("Spawn")]
-    [Tooltip("Leaf prefabs (use a flat quad prefab with its plane facing +Z).")]
     public GameObject[] leafPrefabs;
-    [Tooltip("Number of leaves to attempt to place. Actual placed may be less due to spacing constraints.")]
     public int targetCount = 300;
-    [Tooltip("Minimum spacing between spawned leaves (world units).")]
     public float minSpacing = 0.05f;
-    [Tooltip("Maximum attempts per leaf before giving up.")]
     public int maxPlacementAttempts = 30;
 
     [Header("Pile shape")]
-    [Tooltip("Thickness of the pile along the normal (leaves will be offset inward up to this amount).")]
     public float pileThickness = 0.05f;
-    [Tooltip("Only spawn on the upper hemisphere (normal.y >= hemisphereMinY). 0 = exact half, 0.1+ = more top-heavy.")]
     [Range(0f, 1f)]
     public float hemisphereMinY = 0f;
 
     [Header("Orientation")]
-    [Tooltip("Random yaw around the surface normal in degrees.")]
     public float maxRandomYaw = 90f;
-    [Tooltip("Maximum small tilt applied around tangent axes for more natural leaf variation.")]
     public float maxTiltDegrees = 5f;
 
     [Header("Core")]
-    [Tooltip("Create a dark core sphere beneath the leaves to give depth.")]
     public bool createCore = true;
-    [Tooltip("Core material (use a dark material).")]
     public Material coreMaterial;
-    [Tooltip("Inset core slightly so leaves overlap it (radius = radius - coreInset).")]
     public float coreInset = 0.02f;
 
     [Header("Terrain / safety")]
-    [Tooltip("Optional terrain. If assigned, placements under terrain height will be skipped.")]
     public Terrain terrain;
-    [Tooltip("Small vertical lift above the sampled terrain height to avoid z-fighting.")]
     public float groundHeightOffset = 0.01f;
 
     [Header("Organization")]
-    [Tooltip("Parent for spawned leaves; created as a child if null.")]
     public Transform parent;
 
     [ProButton]
@@ -324,5 +307,16 @@ public class LeafPile : MonoBehaviour
         }
 
         Gizmos.matrix = Matrix4x4.identity;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            Explode();
+    }
+
+    private void Explode()
+    {
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 }
