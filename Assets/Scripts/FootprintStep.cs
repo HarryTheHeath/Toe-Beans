@@ -25,7 +25,9 @@ public class FootprintStep : MonoBehaviour, IInteractable
             foreach (var breadcrumb in breadcrumbs)
                 breadcrumb.gameObject.SetActive(false);
         }
+        _hasTriggered = true;
     }
+
 
     private void Awake()
     {
@@ -37,5 +39,10 @@ public class FootprintStep : MonoBehaviour, IInteractable
     {
         if (finalStep)
             whitePrint.SetActive(true);
+    }
+
+    public bool hasTriggered()
+    {
+        return _hasTriggered;
     }
 }

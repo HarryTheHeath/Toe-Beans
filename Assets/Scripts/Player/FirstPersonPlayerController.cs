@@ -20,6 +20,8 @@ public class FirstPersonPlayerController : MonoBehaviour
 
     InputAction interactAction;
     private IInteractable currentInteractable;
+    
+    public CanvasGroup promptObject;
 
     private void Awake()
     {
@@ -41,7 +43,6 @@ public class FirstPersonPlayerController : MonoBehaviour
 
     private void Update()
     {
-
         HandleMovement();
         HandleJump();
         HandleInteract();
@@ -94,6 +95,7 @@ public class FirstPersonPlayerController : MonoBehaviour
         if (interactAction.triggered && controller.isGrounded)
         {
             currentInteractable?.Interact();
+            promptObject.alpha = 0;
         }
     }
     
@@ -105,7 +107,11 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         var interactable = other.GetComponentInParent<IInteractable>();
         if (interactable != null)
+        {
             currentInteractable = interactable;
+            if (!currentInteractable.hasTriggered())
+                promptObject.alpha = 1;
+        }
     }
 
     // When leaving the current interactable, set current interactable to null 
@@ -113,6 +119,9 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         var interactable = other.GetComponentInParent<IInteractable>();
         if (interactable != null && interactable == currentInteractable)
+        {
             currentInteractable = null;
+            promptObject.alpha = 0;
+        }
     }
 }
