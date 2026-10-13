@@ -26,6 +26,9 @@ public class FirstPersonPlayerController : MonoBehaviour
     public CanvasGroup promptObject;
     public TextMeshProUGUI promptTagTMP;
     public TextMeshProUGUI promptActionTMP;
+    
+    private bool isFrozen = false;
+    
 
 
     private void Awake()
@@ -53,8 +56,11 @@ public class FirstPersonPlayerController : MonoBehaviour
 
     private void Update()
     {
-        HandleMovement();
-        HandleJump();
+        if (!isFrozen)
+        { 
+            HandleMovement();
+            HandleJump();
+        }
         HandleInteract();
     }
 
@@ -139,5 +145,17 @@ public class FirstPersonPlayerController : MonoBehaviour
             promptActionTMP.text = "";
             promptObject.alpha = 0;
         }
+    }
+    
+    // Freeze and unfreeze player movement
+    
+    public void freeze()
+    {
+        isFrozen = true;
+    }
+    
+    public void unfreeze()
+    {
+        isFrozen = false;
     }
 }

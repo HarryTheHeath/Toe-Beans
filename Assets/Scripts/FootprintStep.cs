@@ -9,6 +9,7 @@ public class FootprintStep : MonoBehaviour, IInteractable
     [SerializeField] private GameObject nextPrint;
     // White part of the print. Link in final footprint.
     [SerializeField] private GameObject whitePrint;
+    [SerializeField] private GameObject playerObject;
     [SerializeField] private GameObject[] breadcrumbs;
     [SerializeField] private float triggerRadius = 2f;
     [SerializeField] private Vector3 spherePos;
@@ -16,6 +17,10 @@ public class FootprintStep : MonoBehaviour, IInteractable
     [Header("UI")]
     [SerializeField] private String uiPromptTag;
     [SerializeField] private String uiPromptAction;
+    
+    
+    // Leaf minigame
+    public Canvas leafMinigame;
 
 
     private bool _hasTriggered = false;
@@ -29,6 +34,12 @@ public class FootprintStep : MonoBehaviour, IInteractable
             nextPrint.SetActive(true);
             foreach (var breadcrumb in breadcrumbs)
                 breadcrumb.gameObject.SetActive(false);
+        }
+        else
+        {
+            leafMinigame.gameObject.SetActive(true);
+            playerObject.TryGetComponent<FirstPersonPlayerController>(out FirstPersonPlayerController player);
+            player.freeze();
         }
         _hasTriggered = true;
     }
