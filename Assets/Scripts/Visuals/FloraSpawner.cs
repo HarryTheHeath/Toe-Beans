@@ -27,6 +27,9 @@ public class FloraSpawner : MonoBehaviour
     [Header("Variation")]
     [SerializeField] private bool randomRotation = false;
 
+    [Header("References")]
+    [SerializeField] private Transform camRef;
+
     [ProButton]
     public void Generate()
     {
@@ -86,12 +89,14 @@ public class FloraSpawner : MonoBehaviour
                 ? Random.Range(0f, 360f)
                 : 0f;
 
-            Instantiate(
+            var instance = Instantiate(
                 prefabs[Random.Range(0, prefabs.Length)],
                 worldPosition,
                 Quaternion.Euler(0f, rotationY, 0f),
                 transform
             );
+
+            instance.billboard.cam = camRef;
         }
 
         Randomise();
