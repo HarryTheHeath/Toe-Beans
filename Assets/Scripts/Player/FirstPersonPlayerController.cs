@@ -23,12 +23,17 @@ public class FirstPersonPlayerController : MonoBehaviour
     private IInteractable currentInteractable;
 
     [Header("UI")]
-    public CanvasGroup promptObject;
+    [SerializeField] public CanvasGroup promptObject;
     public TextMeshProUGUI promptTagTMP;
     public TextMeshProUGUI promptActionTMP;
     
     private bool isFrozen = false;
     
+    // Equipping pole
+    [SerializeField] public Yraiser Yraiser;
+    [SerializeField] public GameObject flagPole;
+    private GameObject equipped;
+    private InputAction equipAction;
 
 
     private void Awake()
@@ -46,6 +51,7 @@ public class FirstPersonPlayerController : MonoBehaviour
         lookAction = playerMap.FindAction("Look");
         jumpAction = playerMap.FindAction("Jump");
         interactAction = playerMap.FindAction("Interact");
+        equipAction = playerMap.FindAction("EquipPole");
 
         promptTagTMP.text = string.Empty;
         promptActionTMP.text = string.Empty;
@@ -62,6 +68,7 @@ public class FirstPersonPlayerController : MonoBehaviour
             HandleJump();
         }
         HandleInteract();
+        HandleEquipPole();
     }
 
     private void LateUpdate()
@@ -115,6 +122,27 @@ public class FirstPersonPlayerController : MonoBehaviour
         }
     }
     
+    public void HandleEquipPole() {
+        if (equipAction.triggered && controller.isGrounded)
+        {
+            if (!flagPole.activeSelf)
+            {
+                flagPole.SetActive(true);
+                promptTagTMP.text = Yraiser.getUiPromptTag();
+                promptActionTMP.text = Yraiser.getUiPromptActionNotRaised();
+                promptObject.alpha = 1;
+            }
+            else
+            {
+                flagPole.SetActive(false);
+                promptTagTMP.text = "";
+                promptActionTMP.text = "";
+                promptObject.alpha = 0;
+            }
+            
+        }
+    }
+    
     // Keeping track of the current interactable //
     // Beware: If there are several interactable objects nearby, the most recently collided will be current
     
@@ -158,4 +186,6 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         isFrozen = false;
     }
+    
+    
 }

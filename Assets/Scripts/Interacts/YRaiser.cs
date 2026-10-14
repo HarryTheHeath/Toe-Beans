@@ -46,6 +46,15 @@ public class Yraiser : MonoBehaviour, IInteractable
     [SerializeField] private String uiPromptActionNotRaised;
     [SerializeField] private String uiPromptActionRaised;
 
+    public String getUiPromptTag()
+    {
+        return uiPromptTag;
+    }
+
+    public String getUiPromptActionNotRaised()
+    {
+        return uiPromptActionNotRaised;
+    }
 
     private void Start()
     {
