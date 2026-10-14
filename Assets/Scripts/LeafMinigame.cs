@@ -4,16 +4,25 @@ using UnityEngine.UI;
 public class LeafMinigame : MonoBehaviour
 {
     [SerializeField] private GameObject playerObject;
-    public Image[] leafButtons;
+    [SerializeField] public Image[] leafButtons;
     private int removedCount = 0;
+    private bool printClickable = false;
+    
 
     public void RemoveLeaf()
     {
         removedCount++;
         if (removedCount >= leafButtons.Length)
         {
-            MiniGameWin();
+            Debug.Log("All leafs removed!");
+            printClickable = true;
         }
+    }
+
+    public void OnClickPrint()
+    {
+        if (printClickable)
+            MiniGameWin();
     }
     
     private void MiniGameWin()
@@ -21,9 +30,8 @@ public class LeafMinigame : MonoBehaviour
         Debug.Log("MiniGameWin");
         playerObject.TryGetComponent<FirstPersonPlayerController>(out FirstPersonPlayerController player);
         player.unfreeze();
+        gameObject.SetActive(false);
     }
-    
-    // TODO: add leafbuttons to the array and count number of removed leafs.
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
