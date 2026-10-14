@@ -1,13 +1,13 @@
 using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
 
-public class SoundInteract : MonoBehaviour
+public class SFX : MonoBehaviour
 {
     public AudioClip audioClip;
     public AudioSource audio;
 
     [ProButton]
-    void PlayAudio()
+    public void PlayAudio()
     {
         if (!audio.isPlaying)
             audio.PlayOneShot(audioClip);
