@@ -19,6 +19,7 @@ public class FirstPersonPlayerController : MonoBehaviour
     private InputAction moveAction;
     private InputAction lookAction;
     private InputAction jumpAction;
+    private InputAction pauseAction;
 
     InputAction interactAction;
     private IInteractable currentInteractable;
@@ -38,6 +39,8 @@ public class FirstPersonPlayerController : MonoBehaviour
     private GameObject equipped;
     private InputAction equipAction;
     private bool poleEquipped;
+    private bool paused;
+    [SerializeField] public CanvasGroup pause;
 
 
     private void Awake()
@@ -56,6 +59,7 @@ public class FirstPersonPlayerController : MonoBehaviour
         jumpAction = playerMap.FindAction("Jump");
         interactAction = playerMap.FindAction("Interact");
         equipAction = playerMap.FindAction("EquipPole");
+        pauseAction = playerMap.FindAction("Pause");
 
         promptTagTMP.text = string.Empty;
         promptActionTMP.text = string.Empty;
@@ -72,6 +76,7 @@ public class FirstPersonPlayerController : MonoBehaviour
             HandleJump();
         }
         HandleInteract();
+        HandlePause();
         HandleEquipPole();
         if (poleEquipped)
             HandlePlantPole();
@@ -101,6 +106,8 @@ public class FirstPersonPlayerController : MonoBehaviour
 
     private void HandleLook()
     {
+        if (isFrozen) return;
+
         Vector2 look = lookAction.ReadValue<Vector2>();
 
         xRotation -= look.y * mouseSensitivity;
@@ -125,6 +132,26 @@ public class FirstPersonPlayerController : MonoBehaviour
         {
             currentInteractable?.Interact();
             promptObject.alpha = 0;
+        }
+    }
+
+    public void HandlePause()
+    {
+        if (pauseAction.triggered)
+        {
+            paused = !paused;
+
+            if (paused)
+            {
+                freeze();
+                pause.alpha = 1;
+
+            }
+            else
+            {
+                unfreeze();
+                pause.alpha = 0;
+            }
         }
     }
 
