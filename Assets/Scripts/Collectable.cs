@@ -1,16 +1,33 @@
+using System;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour
+public class Collectable : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    [Header("UI")]
+    [SerializeField] private String uiPromptTag;
+    [SerializeField] private String uiPromptAction;
+
+    private bool _hasTriggered;
+
+    public bool hasTriggered()
     {
-        
+        return _hasTriggered;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        
+        gameObject.SetActive(false);
+        _hasTriggered = true;
+    }
+
+    public string promptAction()
+    {
+        return uiPromptAction;
+    }
+
+    public string promptTag()
+    {
+        return uiPromptTag;
     }
 }
