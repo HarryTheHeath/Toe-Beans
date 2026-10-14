@@ -35141,11 +35141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c27fbc1444f66418523be25691c3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPromptTag: Frog
-  uiPromptAction: pick up
-  manager: {fileID: 1652354585}
-  sfx: {fileID: 463950649}
-  type: 1
+  uiPromptTag: 
+  uiPromptAction: 
+  manager: {fileID: 0}
+  sfx: {fileID: 0}
+  type: 0
 --- !u!135 &463950647
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -73099,7 +73099,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 20}
+  m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -73138,10 +73138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c27fbc1444f66418523be25691c3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPromptTag: Frog
-  uiPromptAction: pick up
-  manager: {fileID: 1652354585}
-  sfx: {fileID: 1039196551}
+  uiPromptTag: 
+  uiPromptAction: 
+  manager: {fileID: 0}
+  sfx: {fileID: 0}
   type: 0
 --- !u!135 &1039196548
 SphereCollider:
@@ -108308,7 +108308,7 @@ MonoBehaviour:
   firstPersonPlayerController: {fileID: 0}
   target: {fileID: 1039196544}
   parent: {fileID: 0}
-  triggerCollider: {fileID: 1039196548}
+  triggerCollider: {fileID: 0}
   sr: {fileID: 1039196545}
   startPosition: {x: 0, y: 0.125, z: 0}
   endPosition: {x: 0, y: 0.5, z: 0}
@@ -108409,12 +108409,12 @@ MonoBehaviour:
   groundHeightOffset: 0.01
   parent: {fileID: 1705592574}
   particles: {fileID: 206544646}
-  myCollider: {fileID: 1645280315}
-  trigger: {fileID: 1645280313}
+  myCollider: {fileID: 0}
+  trigger: {fileID: 0}
   reveal: {fileID: 1039196544}
   waitTime: 0.25
   yraiser: {fileID: 1645280312}
-  revealCollider: {fileID: 1039196548}
+  revealCollider: {fileID: 0}
   uiPromptTag: leaf pile
   uiPromptAction: kick
 --- !u!135 &1645280315
@@ -113813,12 +113813,12 @@ MonoBehaviour:
   groundHeightOffset: 0.01
   parent: {fileID: 1061654116}
   particles: {fileID: 1855064415}
-  myCollider: {fileID: 1717215518}
-  trigger: {fileID: 1717215523}
+  myCollider: {fileID: 0}
+  trigger: {fileID: 0}
   reveal: {fileID: 463950641}
   waitTime: 0.25
   yraiser: {fileID: 1717215524}
-  revealCollider: {fileID: 463950647}
+  revealCollider: {fileID: 0}
   uiPromptTag: leaf pile
   uiPromptAction: kick
 --- !u!135 &1717215523
@@ -113860,7 +113860,7 @@ MonoBehaviour:
   firstPersonPlayerController: {fileID: 0}
   target: {fileID: 463950641}
   parent: {fileID: 0}
-  triggerCollider: {fileID: 463950647}
+  triggerCollider: {fileID: 0}
   sr: {fileID: 463950645}
   startPosition: {x: 0, y: -0.1, z: 0}
   endPosition: {x: 0, y: 0.3, z: 0}
