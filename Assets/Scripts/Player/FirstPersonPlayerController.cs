@@ -23,12 +23,20 @@ public class FirstPersonPlayerController : MonoBehaviour
     private IInteractable currentInteractable;
 
     [Header("UI")]
-    public CanvasGroup promptObject;
+    [SerializeField] public CanvasGroup promptObject;
     public TextMeshProUGUI promptTagTMP;
     public TextMeshProUGUI promptActionTMP;
     
     private bool isFrozen = false;
     
+    // Equipping pole
+    [SerializeField] public Yraiser Yraiser;
+    [SerializeField] public GameObject flagPole;
+    [SerializeField] public GameObject flagPrefab;
+
+    private GameObject equipped;
+    private InputAction equipAction;
+    private bool poleEquipped;
 
 
     private void Awake()
@@ -46,6 +54,7 @@ public class FirstPersonPlayerController : MonoBehaviour
         lookAction = playerMap.FindAction("Look");
         jumpAction = playerMap.FindAction("Jump");
         interactAction = playerMap.FindAction("Interact");
+        equipAction = playerMap.FindAction("EquipPole");
 
         promptTagTMP.text = string.Empty;
         promptActionTMP.text = string.Empty;
@@ -62,6 +71,9 @@ public class FirstPersonPlayerController : MonoBehaviour
             HandleJump();
         }
         HandleInteract();
+        HandleEquipPole();
+        if (poleEquipped)
+            HandlePlantPole();
     }
 
     private void LateUpdate()
@@ -115,6 +127,46 @@ public class FirstPersonPlayerController : MonoBehaviour
         }
     }
     
+    public void HandleEquipPole() {
+        if (equipAction.triggered && controller.isGrounded)
+        {
+            if (!flagPole.activeSelf)
+            {
+                flagPole.SetActive(true);
+                promptTagTMP.text = Yraiser.getUiPromptTag();
+                promptActionTMP.text = Yraiser.getUiPromptActionNotPlanted();
+                promptObject.alpha = 1;
+                poleEquipped = true;
+            }
+            else
+            {
+                deactivatePole();
+            }
+            
+        }
+    }
+
+    private void deactivatePole()
+    {
+        flagPole.SetActive(false);
+        promptTagTMP.text = "";
+        promptActionTMP.text = "";
+        promptObject.alpha = 0;
+        poleEquipped = false;
+    }
+
+    public void HandlePlantPole()
+    {
+        if (interactAction.triggered && controller.isGrounded)
+        {
+            Vector3 pos = transform.position + transform.forward * 2f - Vector3.up * 0.2f;
+            GameObject plantedPole = Instantiate(flagPrefab, pos, Quaternion.identity);
+            plantedPole.GetComponent<BoxCollider>().enabled = true; // planted pole
+            deactivatePole(); // equipped pole
+        }
+    }
+    
+    
     // Keeping track of the current interactable //
     // Beware: If there are several interactable objects nearby, the most recently collided will be current
     
@@ -158,4 +210,6 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         isFrozen = false;
     }
+    
+    
 }
