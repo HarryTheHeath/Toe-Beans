@@ -202,11 +202,8 @@ public class Yraiser : MonoBehaviour, IInteractable
     [ProButton]
     private void ApplyStart()
     {
-        if (!UnityEditor.EditorApplication.isPlaying)
-        {
-            if (captureStartOnStart)
+        if (captureStartOnStart)
                 _capturedStartPos = useLocalPosition ? target.transform.localPosition : target.transform.position;
-        }
     }
 
     public void Interact()

@@ -4,12 +4,12 @@ using UnityEngine;
 public class SFX : MonoBehaviour
 {
     public AudioClip audioClip;
-    public AudioSource audio;
+    public AudioSource audioSource;
 
     [ProButton]
     public void PlayAudio()
     {
-        if (!audio.isPlaying)
-            audio.PlayOneShot(audioClip);
+        if (!audioSource.isPlaying)
+            audioSource.PlayOneShot(audioClip);
     }
 }
