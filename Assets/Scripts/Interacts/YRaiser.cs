@@ -11,8 +11,11 @@ public class Yraiser : MonoBehaviour, IInteractable
     public bool captureStartOnStart;
     public bool setAtStartOnStart = true;
     public bool toggleSR;
+    public FirstPersonPlayerController firstPersonPlayerController;
 
     public GameObject target;
+    public GameObject parent;
+    public Collider triggerCollider;
     public SpriteRenderer sr;
     public Vector3 startPosition;
 
@@ -27,6 +30,8 @@ public class Yraiser : MonoBehaviour, IInteractable
 
     public float startDelay = 0f;
     public bool raised;
+    public bool deleteAfterLowering;
+    public bool triggerDeactivatedOnStart;
 
     [Header("Timing & Curve")]
     public float duration = 1f;
@@ -57,6 +62,11 @@ public class Yraiser : MonoBehaviour, IInteractable
         return uiPromptActionNotPlanted;
     }
 
+    public void SetPlayer(FirstPersonPlayerController player)
+    {
+        firstPersonPlayerController = player;
+    }
+
     private void Start()
     {
         if (captureStartOnStart)
@@ -78,6 +88,9 @@ public class Yraiser : MonoBehaviour, IInteractable
         if (playOnStart)
             StartRaise();
 
+        if (triggerDeactivatedOnStart)
+            triggerCollider.enabled = false;
+
         _inProgress = false;
     }
 
@@ -87,6 +100,9 @@ public class Yraiser : MonoBehaviour, IInteractable
     {
         if (sr != null)
             sr.enabled = true;
+
+        if (triggerCollider != null)
+            triggerCollider.enabled = false;
 
         if (captureStartOnStart)
             _capturedStartPos = useLocalPosition ? target.transform.localPosition : target.transform.position;
@@ -160,11 +176,19 @@ public class Yraiser : MonoBehaviour, IInteractable
 
         _running = null;
 
-        if (disableAtEnd && sr != null)
-            sr.enabled = false;
+        /*if (disableAtEnd && sr != null) { }
+            sr.enabled = false;*/
+
 
         _inProgress = false;
+        triggerCollider.enabled = true;
         onComplete?.Invoke();
+
+        if (deleteAfterLowering && !raised)
+        {
+            firstPersonPlayerController.ClearInteractable(this);
+            Destroy(parent);
+        }
     }
 
     private void ApplyPosition(Vector3 pos)
@@ -187,6 +211,7 @@ public class Yraiser : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (!isActiveAndEnabled) return;
         if (_inProgress) return;
         if (!raised)
             StartRaise();

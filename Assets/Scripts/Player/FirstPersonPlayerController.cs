@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -126,6 +127,12 @@ public class FirstPersonPlayerController : MonoBehaviour
             promptObject.alpha = 0;
         }
     }
+
+    public void ClearInteractable(IInteractable interact)
+    {
+        if (currentInteractable == interact)
+            currentInteractable = null;
+    }
     
     public void HandleEquipPole() {
         if (equipAction.triggered && controller.isGrounded)
@@ -161,9 +168,17 @@ public class FirstPersonPlayerController : MonoBehaviour
         {
             Vector3 pos = transform.position + transform.forward * 2f - Vector3.up * 0.2f;
             GameObject plantedPole = Instantiate(flagPrefab, pos, Quaternion.identity);
-            plantedPole.GetComponent<BoxCollider>().enabled = true; // planted pole
+            var flag = plantedPole.GetComponent<Yraiser>();
+            flag.SetPlayer(this);
+            StartCoroutine(WaitToRaiseFlag(flag));
             deactivatePole(); // equipped pole
         }
+    }
+
+    private IEnumerator WaitToRaiseFlag(Yraiser flag)
+    {
+        yield return new WaitForSeconds(0.5f);
+        flag.Interact();
     }
     
     
