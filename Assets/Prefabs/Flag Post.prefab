@@ -169,6 +169,7 @@ MonoBehaviour:
   uiPromptTag: Flag
   uiPromptActionNotRaised: raise
   uiPromptActionRaised: lower
+  uiPromptActionNotPlanted: 
 --- !u!65 &4737703069397407624
 BoxCollider:
   m_ObjectHideFlags: 0

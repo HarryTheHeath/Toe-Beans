@@ -32,6 +32,8 @@ public class FirstPersonPlayerController : MonoBehaviour
     // Equipping pole
     [SerializeField] public Yraiser Yraiser;
     [SerializeField] public GameObject flagPole;
+    [SerializeField] public GameObject flagPrefab;
+
     private GameObject equipped;
     private InputAction equipAction;
     private bool poleEquipped;
@@ -158,7 +160,7 @@ public class FirstPersonPlayerController : MonoBehaviour
         if (interactAction.triggered && controller.isGrounded)
         {
             Vector3 pos = transform.position + transform.forward * 2f - Vector3.up * 0.2f;
-            GameObject plantedPole = Instantiate(flagPole, pos, Quaternion.identity);
+            GameObject plantedPole = Instantiate(flagPrefab, pos, Quaternion.identity);
             plantedPole.GetComponent<BoxCollider>().enabled = true; // planted pole
             deactivatePole(); // equipped pole
         }

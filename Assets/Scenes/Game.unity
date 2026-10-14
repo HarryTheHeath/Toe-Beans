@@ -532,8 +532,9 @@ MonoBehaviour:
   promptObject: {fileID: 1425811149}
   promptTagTMP: {fileID: 1168663372}
   promptActionTMP: {fileID: 294976024}
-  Yraiser: {fileID: 1928103933}
+  Yraiser: {fileID: 1665962475909078240, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
   flagPole: {fileID: 1127070920}
+  flagPrefab: {fileID: 5393421696752961272, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
 --- !u!114 &68716365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8692,7 +8693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5393421696752961272, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
       propertyPath: m_Name
-      value: Flag Post
+      value: Flag Post Equip
       objectReference: {fileID: 0}
     - target: {fileID: 5393421696752961272, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
       propertyPath: m_IsActive
@@ -8748,17 +8749,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
   m_PrefabInstance: {fileID: 1928103930}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1928103933 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1665962475909078240, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-  m_PrefabInstance: {fileID: 1928103930}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127070920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72408397d58c45545810f82817dbe248, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1929387700
 GameObject:
   m_ObjectHideFlags: 0
