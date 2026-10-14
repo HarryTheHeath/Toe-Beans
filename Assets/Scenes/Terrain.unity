@@ -26542,9 +26542,9 @@ GameObject:
   - component: {fileID: 463950642}
   - component: {fileID: 463950645}
   - component: {fileID: 463950644}
-  - component: {fileID: 463950643}
   - component: {fileID: 463950647}
   - component: {fileID: 463950646}
+  - component: {fileID: 463950648}
   m_Layer: 0
   m_Name: Frog(Clone)
   m_TagString: Untagged
@@ -26567,24 +26567,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1717215521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &463950643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463950641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b566374cf52fb4ba7211283da641ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: 3745e476b0e8c3c47816651a022c8964, type: 3}
-  spriteRenderer: {fileID: 463950645}
-  billboard: {fileID: 463950644}
-  minScale: 0.075
-  maxScale: 0.125
 --- !u!114 &463950644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26665,6 +26647,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c27fbc1444f66418523be25691c3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiPromptTag: Frog
+  uiPromptAction: pick up
 --- !u!135 &463950647
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26682,10 +26666,76 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &463950648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463950641}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10.24
+  m_Size: {x: 20.48, y: 15, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &466256166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466256168}
+  - component: {fileID: 466256167}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &466256167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466256166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3720ed9e3a5766847b1d41a5d2bd0a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+--- !u!4 &466256168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466256166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.15004, y: -0, z: -36.16243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &468572157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96724,10 +96774,12 @@ MonoBehaviour:
   groundHeightOffset: 0.01
   parent: {fileID: 1061654116}
   particles: {fileID: 1855064415}
-  collider: {fileID: 1717215518}
+  myCollider: {fileID: 1717215518}
+  trigger: {fileID: 1717215523}
   reveal: {fileID: 463950641}
   waitTime: 0.25
   yraiser: {fileID: 1717215524}
+  revealCollider: {fileID: 463950647}
   uiPromptTag: leaf pile
   uiPromptAction: kick
 --- !u!135 &1717215523
@@ -127641,3 +127693,4 @@ SceneRoots:
   - {fileID: 195239785}
   - {fileID: 485490070}
   - {fileID: 1855064416}
+  - {fileID: 466256168}
