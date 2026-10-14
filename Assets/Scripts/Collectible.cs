@@ -1,12 +1,14 @@
 using System;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour, IInteractable
+public class Collectible : MonoBehaviour, IInteractable
 {
 
     [Header("UI")]
     [SerializeField] private String uiPromptTag;
     [SerializeField] private String uiPromptAction;
+    [SerializeField] private CollectibleManager manager;
+    public CollectibleManager.CollectibleType type;
 
     private bool _hasTriggered;
 
@@ -17,8 +19,9 @@ public class Collectable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        gameObject.SetActive(false);
         _hasTriggered = true;
+        manager.IncreaseCount(type);
+        gameObject.SetActive(false);
     }
 
     public string promptAction()
