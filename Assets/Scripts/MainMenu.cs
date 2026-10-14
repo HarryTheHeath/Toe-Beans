@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject buttonPanel;
     [SerializeField] private GameObject credits;
+    [SerializeField] private String sceneName;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame() 
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(sceneName);
     }
     
     public void QuitGame() 
