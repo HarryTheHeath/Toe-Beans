@@ -396,195 +396,11 @@ MonoBehaviour:
   uiPromptTag: ??? Print
   uiPromptAction: track
   leafMinigame: {fileID: 0}
---- !u!1 &68716356
+--- !u!1 &68716356 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1987926294483243433, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+  m_PrefabInstance: {fileID: 9083082545076779236}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 68716361}
-  - component: {fileID: 68716360}
-  - component: {fileID: 68716359}
-  - component: {fileID: 68716363}
-  - component: {fileID: 68716364}
-  - component: {fileID: 68716365}
-  - component: {fileID: 68716366}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &68716359
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68716356}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &68716360
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68716356}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &68716361
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68716356}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -19.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1739524755}
-  - {fileID: 1928103931}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &68716363
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68716356}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &68716364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68716356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe50d4cb45d6ada47b76c197b441de3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 5
-  mouseSensitivity: 2
-  maxLookAngle: 90
-  promptObject: {fileID: 1425811149}
-  promptTagTMP: {fileID: 1168663372}
-  promptActionTMP: {fileID: 294976024}
-  Yraiser: {fileID: 1928103933}
-  flagPole: {fileID: 1127070920}
---- !u!114 &68716365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68716356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 1739524757}
---- !u!65 &68716366
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68716356}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &73270777
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +730,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: weoifweognw
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &121177219
@@ -1335,6 +1163,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: weoifweognw
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &267729524
@@ -3421,6 +3261,18 @@ MonoBehaviour:
           m_StringArgument: weoifweognw
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &734420445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4765,6 +4617,18 @@ MonoBehaviour:
           m_StringArgument: weoifweognw
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &925948191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4982,6 +4846,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: weoifweognw
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1005419557
@@ -5503,11 +5379,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1127070920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5393421696752961272, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-  m_PrefabInstance: {fileID: 1928103930}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129157906
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,6 +5696,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: weoifweognw
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1169566044
@@ -6440,6 +6323,7 @@ GameObject:
   - component: {fileID: 1378281880}
   - component: {fileID: 1378281879}
   - component: {fileID: 1378281878}
+  - component: {fileID: 1378281884}
   m_Layer: 5
   m_Name: Leaf Minigame Canvas
   m_TagString: Untagged
@@ -6580,6 +6464,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1378281884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378281877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4306404be957c2ecc943b64f1aec6b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 68716356}
+  leafButtons:
+  - {fileID: 1962926285}
+  - {fileID: 1169566044}
+  - {fileID: 734420445}
+  - {fileID: 1743568823}
+  - {fileID: 925948191}
+  - {fileID: 2019741591}
+  - {fileID: 1591885966}
+  - {fileID: 1005419557}
+  - {fileID: 121177219}
+  - {fileID: 267729524}
 --- !u!1 &1387045526
 GameObject:
   m_ObjectHideFlags: 0
@@ -7367,6 +7275,18 @@ MonoBehaviour:
           m_StringArgument: weoifweognw
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1591885966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7879,134 +7799,6 @@ Transform:
   - {fileID: 680102046}
   m_Father: {fileID: 477524438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1739524754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1739524755}
-  - component: {fileID: 1739524757}
-  - component: {fileID: 1739524756}
-  m_Layer: 0
-  m_Name: PlayerCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1739524755
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739524754}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 68716361}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1739524756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739524754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
---- !u!20 &1739524757
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739524754}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &1743568820
 GameObject:
   m_ObjectHideFlags: 0
@@ -8099,6 +7891,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: weoifweognw
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1743568823
@@ -8670,95 +8474,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1067832353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1928103930
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 68716361}
-    m_Modifications:
-    - target: {fileID: 1665962475909078240, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: uiPromptActionNotRaised
-      value: raise
-      objectReference: {fileID: 0}
-    - target: {fileID: 1665962475909078240, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: uiPromptActionNotPlanted
-      value: plant
-      objectReference: {fileID: 0}
-    - target: {fileID: 4737703069397407624, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5393421696752961272, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_Name
-      value: Flag Post
-      objectReference: {fileID: 0}
-    - target: {fileID: 5393421696752961272, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99554557
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.048612285
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.08064079
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0047870963
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 5.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 9.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
---- !u!4 &1928103931 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7170972910813601808, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-  m_PrefabInstance: {fileID: 1928103930}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1928103933 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1665962475909078240, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
-  m_PrefabInstance: {fileID: 1928103930}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127070920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72408397d58c45545810f82817dbe248, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1929387700
 GameObject:
   m_ObjectHideFlags: 0
@@ -9102,6 +8817,18 @@ MonoBehaviour:
           m_StringArgument: weoifweognw
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1962926285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9222,9 +8949,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1986851070}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: OnClickPrint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9508,6 +9235,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: weoifweognw
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378281884}
+        m_TargetAssemblyTypeName: LeafMinigame, Assembly-CSharp
+        m_MethodName: RemoveLeaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2019741591
@@ -11241,6 +10980,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12dd01811436a5a4da156659ef30b870, type: 3}
+--- !u!1001 &9083082545076779236
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1987926294483243433, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925396267466901204, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: promptObject
+      value: 
+      objectReference: {fileID: 1425811149}
+    - target: {fileID: 2925396267466901204, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: promptTagTMP
+      value: 
+      objectReference: {fileID: 1168663372}
+    - target: {fileID: 2925396267466901204, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: promptActionTMP
+      value: 
+      objectReference: {fileID: 294976024}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355470258604719981, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6502c371f592c784994e6929d6cc461a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -11251,6 +11059,6 @@ SceneRoots:
   - {fileID: 1769396649}
   - {fileID: 477524438}
   - {fileID: 318555979034343416}
-  - {fileID: 68716361}
+  - {fileID: 9083082545076779236}
   - {fileID: 2093178746}
   - {fileID: 1378281883}

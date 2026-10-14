@@ -46,11 +46,13 @@ public class LeafPile : MonoBehaviour, IInteractable
 
     [Header("Reveal")]
     public ParticleSystem particles;
-    public Collider collider;
+    public Collider myCollider;
+    public Collider trigger;
     private bool _hasTriggered;
     public GameObject reveal;
     public float waitTime;
     public Yraiser yraiser;
+    public Collider revealCollider;
     
 
     [Header("UI")]
@@ -335,7 +337,8 @@ public class LeafPile : MonoBehaviour, IInteractable
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         particles.Play();
-        collider.enabled = false;
+        myCollider.enabled = false;
+        trigger.enabled = false;
         if (!_hasTriggered)
             StartCoroutine(Reveal());
     }
@@ -347,6 +350,9 @@ public class LeafPile : MonoBehaviour, IInteractable
         reveal.SetActive(true);
         yield return new WaitForSeconds(waitTime);
         yraiser.Interact();
+        yield return new WaitForSeconds(waitTime);
+        revealCollider.enabled = true;
+
         enabled = false;
     }
 

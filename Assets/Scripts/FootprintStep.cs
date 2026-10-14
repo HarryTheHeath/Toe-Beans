@@ -11,7 +11,7 @@ public class FootprintStep : MonoBehaviour, IInteractable
     [SerializeField] private GameObject whitePrint;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private GameObject[] breadcrumbs;
-    [SerializeField] private float triggerRadius = 2f;
+    //[SerializeField] private float triggerRadius = 2f;
     [SerializeField] private Vector3 spherePos;
 
     [Header("UI")]
