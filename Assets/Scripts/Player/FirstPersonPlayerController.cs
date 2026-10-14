@@ -34,6 +34,7 @@ public class FirstPersonPlayerController : MonoBehaviour
     [SerializeField] public GameObject flagPole;
     private GameObject equipped;
     private InputAction equipAction;
+    private bool poleEquipped;
 
 
     private void Awake()
@@ -69,6 +70,8 @@ public class FirstPersonPlayerController : MonoBehaviour
         }
         HandleInteract();
         HandleEquipPole();
+        if (poleEquipped)
+            HandlePlantPole();
     }
 
     private void LateUpdate()
@@ -129,19 +132,38 @@ public class FirstPersonPlayerController : MonoBehaviour
             {
                 flagPole.SetActive(true);
                 promptTagTMP.text = Yraiser.getUiPromptTag();
-                promptActionTMP.text = Yraiser.getUiPromptActionNotRaised();
+                promptActionTMP.text = Yraiser.getUiPromptActionNotPlanted();
                 promptObject.alpha = 1;
+                poleEquipped = true;
             }
             else
             {
-                flagPole.SetActive(false);
-                promptTagTMP.text = "";
-                promptActionTMP.text = "";
-                promptObject.alpha = 0;
+                deactivatePole();
             }
             
         }
     }
+
+    private void deactivatePole()
+    {
+        flagPole.SetActive(false);
+        promptTagTMP.text = "";
+        promptActionTMP.text = "";
+        promptObject.alpha = 0;
+        poleEquipped = false;
+    }
+
+    public void HandlePlantPole()
+    {
+        if (interactAction.triggered && controller.isGrounded)
+        {
+            Vector3 pos = transform.position + transform.forward * 2f - Vector3.up * 0.2f;
+            GameObject plantedPole = Instantiate(flagPole, pos, Quaternion.identity);
+            plantedPole.GetComponent<BoxCollider>().enabled = true; // planted pole
+            deactivatePole(); // equipped pole
+        }
+    }
+    
     
     // Keeping track of the current interactable //
     // Beware: If there are several interactable objects nearby, the most recently collided will be current

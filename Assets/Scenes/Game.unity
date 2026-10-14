@@ -8680,7 +8680,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1665962475909078240, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
       propertyPath: uiPromptActionNotRaised
-      value: '  plant'
+      value: raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665962475909078240, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
+      propertyPath: uiPromptActionNotPlanted
+      value: plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737703069397407624, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5393421696752961272, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
       propertyPath: m_Name
@@ -8730,8 +8738,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4737703069397407624, guid: fef42d49e9495a2519bcc4b6ce1bac78, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
