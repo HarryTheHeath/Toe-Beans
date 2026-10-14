@@ -10,6 +10,7 @@ public class Collectible : MonoBehaviour, IInteractable
     [SerializeField] private CollectibleManager manager;
     [SerializeField] private SFX sfx;
     public CollectibleManager.CollectibleType type;
+    public FirstPersonPlayerController player;
 
     private bool _hasTriggered;
 
@@ -20,10 +21,14 @@ public class Collectible : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (_hasTriggered)
+            return;
+
         _hasTriggered = true;
         manager.IncreaseCount(type);
         sfx.PlayAudio();
         gameObject.SetActive(false);
+        player.ClearInteractable(this);
     }
 
     public string promptAction()

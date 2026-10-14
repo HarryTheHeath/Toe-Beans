@@ -59,11 +59,9 @@ public class CollectibleManager : MonoBehaviour
         else if (type == CollectibleType.BearTrack)
         {
             bears++;
-            bearTMP.text = bearTMP.ToString();
+            bearTMP.text = bears.ToString();
             bearHUD.SetActive(true);
         }
-
-
     }
 
     public enum CollectibleType
