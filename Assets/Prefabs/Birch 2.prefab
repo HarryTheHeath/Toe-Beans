@@ -907,7 +907,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 69601038f50f03446afda3a948085431, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d1e0524f5b123b54d90794ba68386959, type: 2}
+      objectReference: {fileID: 2100000, guid: d74aff73de7c2a745a4c99eedce4369e, type: 2}
     - target: {fileID: 919132149155446097, guid: 69601038f50f03446afda3a948085431, type: 3}
       propertyPath: m_Name
       value: Birch 2
