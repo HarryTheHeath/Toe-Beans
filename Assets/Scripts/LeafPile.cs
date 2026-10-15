@@ -335,12 +335,12 @@ public class LeafPile : MonoBehaviour, IInteractable
 
     private void Explode()
     {
+        if (_hasTriggered) return;
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         particles.Play();
         myCollider.enabled = false;
         trigger.enabled = false;
-        if (!_hasTriggered)
-            StartCoroutine(Reveal());
+        StartCoroutine(Reveal());
     }
 
     private IEnumerator Reveal()
