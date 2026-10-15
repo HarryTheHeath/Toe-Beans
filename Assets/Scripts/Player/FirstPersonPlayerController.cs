@@ -29,7 +29,7 @@ public class FirstPersonPlayerController : MonoBehaviour
     public TextMeshProUGUI promptTagTMP;
     public TextMeshProUGUI promptActionTMP;
     
-    private bool isFrozen = false;
+    public bool isFrozen = false;
     
     // Equipping pole
     [SerializeField] public Yraiser Yraiser;
@@ -130,8 +130,8 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         if (interactAction.triggered && controller.isGrounded)
         {
-            currentInteractable?.Interact();
             promptObject.alpha = 0;
+            currentInteractable?.Interact();
         }
     }
 
@@ -252,6 +252,5 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         isFrozen = false;
     }
-    
     
 }
