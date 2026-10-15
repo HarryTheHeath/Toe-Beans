@@ -79665,7 +79665,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 358481989}
   type: 5
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &358481992
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -100427,7 +100427,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 463950649}
   type: 1
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &463950647
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -103945,7 +103945,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 480541231}
   type: 0
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &480541234
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -240099,7 +240099,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 1038584281}
   type: 0
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &1038584284
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -240417,7 +240417,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 1039196551}
   type: 0
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &1039196548
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -279395,7 +279395,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 1198598605}
   type: 1
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &1198598608
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -282430,7 +282430,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 1218990855}
   type: 1
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &1218990858
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -322423,7 +322423,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 1392155750}
   type: 1
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &1392155753
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -416589,7 +416589,7 @@ MonoBehaviour:
   manager: {fileID: 1652354585}
   sfx: {fileID: 1823583918}
   type: 0
-  player: {fileID: 0}
+  player: {fileID: 620084221}
 --- !u!135 &1823583921
 SphereCollider:
   m_ObjectHideFlags: 0
