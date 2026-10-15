@@ -40,6 +40,7 @@ public class FirstPersonPlayerController : MonoBehaviour
     private InputAction equipAction;
     private bool poleEquipped;
     private bool paused;
+    private bool canLook = true;
     [SerializeField] public CanvasGroup pause;
 
 
@@ -106,7 +107,7 @@ public class FirstPersonPlayerController : MonoBehaviour
 
     private void HandleLook()
     {
-        if (isFrozen) return;
+        if (!canLook && isFrozen) return;
 
         Vector2 look = lookAction.ReadValue<Vector2>();
 
@@ -140,16 +141,14 @@ public class FirstPersonPlayerController : MonoBehaviour
         if (pauseAction.triggered)
         {
             paused = !paused;
-
             if (paused)
             {
-                freeze();
+                Freeze(false);
                 pause.alpha = 1;
-
             }
             else
             {
-                unfreeze();
+                Unfreeze();
                 pause.alpha = 0;
             }
         }
@@ -243,14 +242,15 @@ public class FirstPersonPlayerController : MonoBehaviour
     
     // Freeze and unfreeze player movement
     
-    public void freeze()
+    public void Freeze(bool canLookAround)
     {
+        canLook = canLookAround;
         isFrozen = true;
     }
     
-    public void unfreeze()
+    public void Unfreeze()
     {
+        canLook = true;
         isFrozen = false;
-    }
-    
+    }  
 }

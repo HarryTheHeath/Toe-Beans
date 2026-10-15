@@ -39,7 +39,7 @@ public class FootprintStep : MonoBehaviour, IInteractable
         {
             leafMinigame.gameObject.SetActive(true);
             playerObject.TryGetComponent<FirstPersonPlayerController>(out FirstPersonPlayerController player);
-            player.freeze();
+            player.Freeze(false);
         }
         _hasTriggered = true;
     }
