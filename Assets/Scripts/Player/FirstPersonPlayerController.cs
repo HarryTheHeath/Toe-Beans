@@ -252,5 +252,52 @@ public class FirstPersonPlayerController : MonoBehaviour
     {
         canLook = true;
         isFrozen = false;
-    }  
+    }
+
+    public bool TeleportTo(Vector3 worldPosition, Quaternion? worldRotation = null, bool clearVelocity = true)
+    {
+        if (controller == null) controller = GetComponent<CharacterController>();
+
+        Vector3 target = worldPosition;
+
+
+        controller.enabled = false;
+
+        transform.position = target;
+        if (worldRotation.HasValue) transform.rotation = worldRotation.Value;
+
+        controller.enabled = true;
+
+        if (clearVelocity)
+            velocity = Vector3.zero;
+
+        var cam = GetComponentInChildren<Camera>();
+        if (cam != null)
+        {
+            float angle = cam.transform.localEulerAngles.x;
+            if (angle > 180f) angle -= 360f;
+            xRotation = Mathf.Clamp(angle, -maxLookAngle, maxLookAngle);
+            cam.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        }
+        Unfreeze();
+        return true;
+    }
+
+    public bool TeleportTo(Transform targetTransform, bool clearVelocity = true)
+    {
+        if (targetTransform == null) return false;
+        return TeleportTo(targetTransform.position, targetTransform.rotation, clearVelocity);
+    }
+
+    private bool IsCapsuleOverlappingAt(Vector3 worldPosition)
+    {
+        if (controller == null) controller = GetComponent<CharacterController>();
+
+        Vector3 worldCenter = worldPosition + transform.rotation * controller.center;
+        float halfHeight = Mathf.Max(0f, (controller.height * 0.5f) - controller.radius);
+        Vector3 bottom = worldCenter + Vector3.down * halfHeight;
+        Vector3 top = worldCenter + Vector3.up * halfHeight;
+
+        return Physics.CheckCapsule(bottom, top, controller.radius, ~0, QueryTriggerInteraction.Ignore);
+    }
 }
