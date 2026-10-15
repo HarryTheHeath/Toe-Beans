@@ -34,7 +34,7 @@ public class LeafMinigame : MonoBehaviour
     {
         Debug.Log("MiniGameWin");
         playerObject.TryGetComponent<FirstPersonPlayerController>(out FirstPersonPlayerController player);
-        player.unfreeze();
+        player.Unfreeze();
         gameObject.SetActive(false);
         collectibleManager.IncreaseCount(type);
     }
