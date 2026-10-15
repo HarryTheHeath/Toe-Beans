@@ -284,7 +284,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1425665736753065291}
   - component: {fileID: 985231827564296203}
-  - component: {fileID: 6568351670251250129}
   - component: {fileID: 5589547590681761522}
   m_Layer: 0
   m_Name: Stump camera
@@ -359,14 +358,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6568351670251250129
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7637941876628793478}
-  m_Enabled: 1
 --- !u!114 &5589547590681761522
 MonoBehaviour:
   m_ObjectHideFlags: 0

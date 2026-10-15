@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2690012639023543391}
   - component: {fileID: 520989192127423842}
+  - component: {fileID: 4502411859362332528}
   m_Layer: 0
   m_Name: HighLight (2)
   m_TagString: Untagged
@@ -178,7 +179,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,6 +190,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4502411859362332528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592015317979684587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &2881918703970542418
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6591007220817800164}
   - component: {fileID: 6792337824849657514}
+  - component: {fileID: 8492399632597116027}
   m_Layer: 0
   m_Name: HighLight
   m_TagString: Untagged
@@ -265,7 +280,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -276,6 +291,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8492399632597116027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881918703970542418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &3015148332713327674
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +382,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -456,7 +484,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -558,7 +586,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -592,6 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7599433089640447213}
   - component: {fileID: 5857303801530153034}
+  - component: {fileID: 386703955197994503}
   m_Layer: 0
   m_Name: HighLight (4)
   m_TagString: Untagged
@@ -658,7 +687,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -669,6 +698,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &386703955197994503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050698435918319645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &5205866235128274730
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 746450656272399013}
   - component: {fileID: 9144103483064814930}
+  - component: {fileID: 1270819502923932182}
   m_Layer: 0
   m_Name: HighLight
   m_TagString: Untagged
@@ -745,7 +788,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -756,6 +799,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1270819502923932182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5205866235128274730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &5482039819749079326
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 690866150450690151}
   - component: {fileID: 1188339610179397580}
+  - component: {fileID: 8691648296212921159}
   m_Layer: 0
   m_Name: HighLight
   m_TagString: Untagged
@@ -832,7 +889,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -843,6 +900,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8691648296212921159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5482039819749079326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &6295890985315285775
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +991,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1023,7 +1093,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1125,7 +1195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1159,6 +1229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5350137164878538091}
   - component: {fileID: 6172227373393866915}
+  - component: {fileID: 4548364983559956477}
   m_Layer: 0
   m_Name: HighLight (1)
   m_TagString: Untagged
@@ -1225,7 +1296,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -1236,6 +1307,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4548364983559956477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777787325518981636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &7970526361029238513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1398,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2302f27cbfb025f4289417b64f6c14f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b25cbac52193b748a3babeb3a4b83b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1350,6 +1434,7 @@ GameObject:
   - component: {fileID: 189881195545721443}
   - component: {fileID: 1068365304209639959}
   - component: {fileID: 8741360468194108448}
+  - component: {fileID: 6660911188761422313}
   m_Layer: 0
   m_Name: Fairy Circle
   m_TagString: Untagged
@@ -1433,7 +1518,15 @@ MonoBehaviour:
   - {fileID: 4795169744718935599}
   - {fileID: 4138131710008784436}
   - {fileID: 5857303801530153034}
-  shroomType: 0
+  toggleHighlightOnStart: 1
+  shroomType: 1
+  isStartTeleport: 0
+  teleporting: 0
+  waitTime: 3
+  firstPersonPlayerController: {fileID: 0}
+  startTeleport: {fileID: 0}
+  myName: Fairy Ring
+  action: teleport
 --- !u!114 &8741360468194108448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,6 +1542,27 @@ MonoBehaviour:
   randomizeOnStart: 1
   uniformRange: {x: 0.04, y: 0.08}
   originalLocalScale: {x: 0.5, y: 0.5, z: 0.5}
+--- !u!135 &6660911188761422313
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221782870224148711}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8287756252188916117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8409307124876692999}
   - component: {fileID: 4795169744718935599}
+  - component: {fileID: 8240093949745378611}
   m_Layer: 0
   m_Name: HighLight (2)
   m_TagString: Untagged
@@ -1525,7 +1640,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -1536,6 +1651,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8240093949745378611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8287756252188916117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &9049853092809895731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016423771616072362}
   - component: {fileID: 4138131710008784436}
+  - component: {fileID: 8560619802256668748}
   m_Layer: 0
   m_Name: HighLight (3)
   m_TagString: Untagged
@@ -1612,7 +1741,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ad410f3895ebf4479b5bd3889150547, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0dde57356e13894fbe1679ecedc1c8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
@@ -1623,3 +1752,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8560619802256668748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049853092809895731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd7a77dbb0c12f42b4d294d532da45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
