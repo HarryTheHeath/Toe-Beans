@@ -7,6 +7,7 @@ public class LeafMinigame : MonoBehaviour
     [SerializeField] public Image[] leafButtons;
     private int removedCount = 0;
     private bool printClickable = false;
+    public Image bearPrint;
     public CollectibleManager collectibleManager;
     public CollectibleManager.CollectibleType type;
 
@@ -18,6 +19,7 @@ public class LeafMinigame : MonoBehaviour
         if (removedCount >= leafButtons.Length)
         {
             Debug.Log("All leafs removed!");
+            bearPrint.raycastTarget = true;
             printClickable = true;
         }
     }
@@ -35,17 +37,5 @@ public class LeafMinigame : MonoBehaviour
         player.unfreeze();
         gameObject.SetActive(false);
         collectibleManager.IncreaseCount(type);
-    }
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
