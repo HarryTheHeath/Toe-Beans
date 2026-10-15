@@ -20,15 +20,17 @@ public class FootprintStep : MonoBehaviour, IInteractable
     
     
     // Leaf minigame
-    public Canvas leafMinigame;
+    public CanvasGroup leafMinigame;
 
 
     private bool _hasTriggered = false;
+    private bool _finished;
 
 
     [ProButton]
     public void Interact()
     {
+        if (_finished) return;
         if (!finalStep)
         {
             nextPrint.SetActive(true);
@@ -39,7 +41,8 @@ public class FootprintStep : MonoBehaviour, IInteractable
         {
             leafMinigame.gameObject.SetActive(true);
             playerObject.TryGetComponent<FirstPersonPlayerController>(out FirstPersonPlayerController player);
-            player.Freeze(false);
+            player.freeze();
+            _finished = true;
         }
         _hasTriggered = true;
     }

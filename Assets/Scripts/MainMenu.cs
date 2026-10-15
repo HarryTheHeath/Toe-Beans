@@ -10,10 +10,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject buttonPanel;
     [SerializeField] private GameObject credits;
     [SerializeField] private String sceneName;
+    public bool mainMenu = true;
 
     private void Start()
     {
-        hideCredits();
+        if (mainMenu)
+            hideCredits();
     }
 
     public void StartGame() 
