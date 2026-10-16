@@ -53,6 +53,7 @@ public class LeafPile : MonoBehaviour, IInteractable
     public float waitTime;
     public Yraiser yraiser;
     public Collider revealCollider;
+    public bool noReveal;
     
 
     [Header("UI")]
@@ -67,6 +68,7 @@ public class LeafPile : MonoBehaviour, IInteractable
 
     private void Awake()
     {
+        if (noReveal) return;
         reveal.SetActive(false);
     }
 
@@ -340,7 +342,8 @@ public class LeafPile : MonoBehaviour, IInteractable
         particles.Play();
         myCollider.enabled = false;
         trigger.enabled = false;
-        StartCoroutine(Reveal());
+        if (!noReveal)
+            StartCoroutine(Reveal());
     }
 
     private IEnumerator Reveal()
