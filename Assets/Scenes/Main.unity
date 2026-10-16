@@ -466757,6 +466757,8 @@ GameObject:
   - component: {fileID: 1985190169}
   - component: {fileID: 1985190168}
   - component: {fileID: 1985190170}
+  - component: {fileID: 1985190172}
+  - component: {fileID: 1985190171}
   m_Layer: 0
   m_Name: Mr Mori
   m_TagString: Untagged
@@ -466846,8 +466848,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731704f19e7b3d3498be14123de6334e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
-  action: 
+  myName: Mr Mori
+  action: talk
+  greetings:
+  - {fileID: 8300000, guid: b5b1a290dc592bf40beca2ea5e278856, type: 3}
+  - {fileID: 8300000, guid: 33e1ed1e1187c9d4e944eba3e375f736, type: 3}
+  - {fileID: 8300000, guid: b5e54b452453f1149bf21b64ab15e610, type: 3}
+  - {fileID: 8300000, guid: a213391886cbaa74db00a4b6cbebd12a, type: 3}
+  - {fileID: 8300000, guid: 1a73ddf6b62f05349b21d92fe04c339b, type: 3}
+  goodbyes:
+  - {fileID: 8300000, guid: 561db4c9c7dfec5488442bbc41fcb846, type: 3}
+  - {fileID: 8300000, guid: 54c5a2bca7ffa604b89936c8f15b64b5, type: 3}
+  - {fileID: 8300000, guid: edd4a9a96d13cfd4caeb9053c622e7ab, type: 3}
+  - {fileID: 8300000, guid: b70bff8820809c8468556e48ef24d302, type: 3}
+  accepts:
+  - {fileID: 8300000, guid: 75852444756765840ac3ade1be3298a5, type: 3}
+  - {fileID: 8300000, guid: 0eed760ead17d7d41b5644b6df94c10a, type: 3}
+  yes:
+  - {fileID: 8300000, guid: 609b4b37f2a8df04cbd654edc598a3d2, type: 3}
+  - {fileID: 8300000, guid: 45c6575eec44f5741819e42f5644ea82, type: 3}
+  - {fileID: 8300000, guid: 31d706b5b33763a4a97b920a51991503, type: 3}
+  prints:
+  - {fileID: 8300000, guid: 9e6c312b39cd49f42aa9179784c5a02f, type: 3}
+  - {fileID: 8300000, guid: 82b6331a3e500664ba4f9e79439f1038, type: 3}
+  onkey: {fileID: 8300000, guid: 3f84fb79c020fa740b4bcec0f95217df, type: 3}
+  audioSource: {fileID: 620084209}
+--- !u!65 &1985190171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985190167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.17, y: 24.4, z: 21}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1985190172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985190167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.246288, y: 26.099998, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1985192026
 PrefabInstance:
   m_ObjectHideFlags: 0
