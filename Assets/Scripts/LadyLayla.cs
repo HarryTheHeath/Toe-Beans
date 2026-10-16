@@ -14,6 +14,7 @@ public class LadyLyla : MonoBehaviour
     [SerializeField] private AudioClip[] footprints;
     [SerializeField] private AudioClip[] lastPrint;
     [SerializeField] private AudioClip[] inspect;
+    [SerializeField] private AudioClip[] present;
     [SerializeField] private AudioClip[] success;
     [SerializeField] private AudioClip[] take;
     [SerializeField] private AudioClip[] yes;
@@ -24,15 +25,16 @@ public class LadyLyla : MonoBehaviour
     private int _lastInt;
     public AudioSource audioSource;
 
-    public void PlayGreeting() => PlayRandomArray(greetings);
-    public void PlayGoodbye() => PlayRandomArray(goodbyes);
-    public void PlayFootstepReaction() => PlayRandomArray(footprints);
-    public void PlayLastPrintReaction() => PlayRandomArray(lastPrint);
-    public void PlayInspect() => PlayRandomArray(inspect);
-    public void PlaySucces() => PlayRandomArray(success);
-    public void PlayTake() => PlayRandomArray(take);
-    public void PlayYes() => PlayRandomArray(yes);
-    public void PlayReaction() => PlayRandomArray(reactions);
+    [ProButton] public void PlayGreeting() => PlayRandomArray(greetings);
+    [ProButton] public void PlayGoodbye() => PlayRandomArray(goodbyes);
+    [ProButton] public void PlayFootstepReaction() => PlayRandomArray(footprints);
+    [ProButton] public void PlayLastPrintReaction() => PlayRandomArray(lastPrint);
+    [ProButton] public void PlayPresent() => PlayRandomArray(present);
+    [ProButton] public void PlayInspect() => PlayRandomArray(inspect);
+    [ProButton] public void PlaySucces() => PlayRandomArray(success);
+    [ProButton] public void PlayTake() => PlayRandomArray(take);
+    [ProButton] public void PlayYes() => PlayRandomArray(yes);
+    [ProButton] public void PlayReaction() => PlayRandomArray(reactions);
 
     public void Hum()
     {
