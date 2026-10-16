@@ -10,6 +10,7 @@ public class LeafMinigame : MonoBehaviour
     public Image bearPrint;
     public CollectibleManager collectibleManager;
     public CollectibleManager.CollectibleType type;
+    public LadyLyla lyla;
 
 
 
@@ -37,5 +38,6 @@ public class LeafMinigame : MonoBehaviour
         player.Unfreeze();
         gameObject.SetActive(false);
         collectibleManager.IncreaseCount(type);
+        lyla.PlaySuccess();
     }
 }

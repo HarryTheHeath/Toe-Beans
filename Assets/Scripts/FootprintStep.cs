@@ -13,6 +13,7 @@ public class FootprintStep : MonoBehaviour, IInteractable
     [SerializeField] private GameObject[] breadcrumbs;
     //[SerializeField] private float triggerRadius = 2f;
     [SerializeField] private Vector3 spherePos;
+    [SerializeField] private LadyLyla lyla;
 
     [Header("UI")]
     [SerializeField] private String uiPromptTag;
@@ -33,12 +34,16 @@ public class FootprintStep : MonoBehaviour, IInteractable
         if (_finished) return;
         if (!finalStep)
         {
+            if (firstStep)
+                lyla.PlayPrints();
+
             nextPrint.SetActive(true);
             foreach (var breadcrumb in breadcrumbs)
                 breadcrumb.gameObject.SetActive(false);
         }
         else
         {
+            lyla.PlayLastPrintReaction();
             leafMinigame.gameObject.SetActive(true);
             playerObject.TryGetComponent<FirstPersonPlayerController>(out FirstPersonPlayerController player);
             player.Freeze(false);

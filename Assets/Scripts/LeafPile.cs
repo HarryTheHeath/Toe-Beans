@@ -60,6 +60,8 @@ public class LeafPile : MonoBehaviour, IInteractable
     [SerializeField] private String uiPromptTag;
     [SerializeField] private String uiPromptAction;
 
+    [SerializeField] private LadyLyla lyla;
+
     [ProButton]
     public void Generate() => GenerateInternal();
 
@@ -361,6 +363,7 @@ public class LeafPile : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        lyla.PlayInspect();
         Explode();
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class FirstPersonPlayerController : MonoBehaviour
 {
@@ -42,6 +43,15 @@ public class FirstPersonPlayerController : MonoBehaviour
     private bool paused;
     private bool canLook = true;
     [SerializeField] public CanvasGroup pause;
+
+    [Header("Footsteps")]
+    [SerializeField] private LadyLyla ladyLyla;
+    [Header("Footsteps")]
+    [SerializeField] private float footstepBaseInterval = 0.45f;
+    [SerializeField] private float footstepMoveThreshold = 0.1f;
+
+    private float footstepTimer = 0f;
+
 
 
     private void Awake()
@@ -100,6 +110,9 @@ public class FirstPersonPlayerController : MonoBehaviour
 
         if (controller.isGrounded && velocity.y < 0)
             velocity.y = -2f;
+
+        float moveMagnitude = new Vector2(input.x, input.y).magnitude; // 0..1
+        UpdateFootsteps(moveMagnitude);
 
         velocity.y += Physics.gravity.y * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
@@ -299,5 +312,38 @@ public class FirstPersonPlayerController : MonoBehaviour
         Vector3 top = worldCenter + Vector3.up * halfHeight;
 
         return Physics.CheckCapsule(bottom, top, controller.radius, ~0, QueryTriggerInteraction.Ignore);
+    }
+
+    private void UpdateFootsteps(float moveMagnitude)
+    {
+        if (ladyLyla == null) return;
+
+        // conditions: not frozen, grounded, and moving past threshold
+        if (isFrozen || !controller.isGrounded || moveMagnitude <= footstepMoveThreshold)
+        {
+            // reset timer so first step plays immediately when starting again
+            footstepTimer = 0f;
+            return;
+        }
+
+        footstepTimer -= Time.deltaTime;
+
+        if (footstepTimer <= 0f)
+        {
+            // speedFactor adjusts cadence by input magnitude
+            float speedFactor = Mathf.Clamp(moveMagnitude, 0.5f, 1.5f);
+
+            // Try to play a footstep on LadyLyla's sfx source. If it played, advance timer by interval.
+            bool played = ladyLyla.TryPlayFootstep();
+            if (played)
+            {
+                footstepTimer = footstepBaseInterval / speedFactor;
+            }
+            else
+            {
+                // sfx source busy — retry shortly
+                footstepTimer = 0.05f;
+            }
+        }
     }
 }

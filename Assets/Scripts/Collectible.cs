@@ -8,11 +8,11 @@ public class Collectible : MonoBehaviour, IInteractable
     [SerializeField] private String uiPromptTag;
     [SerializeField] private String uiPromptAction;
     [SerializeField] private CollectibleManager manager;
-    [SerializeField] private SFX sfx;
     public CollectibleManager.CollectibleType type;
     public FirstPersonPlayerController player;
 
     private bool _hasTriggered;
+    [SerializeField] private LadyLyla lyla;
 
     public bool hasTriggered()
     {
@@ -26,7 +26,7 @@ public class Collectible : MonoBehaviour, IInteractable
 
         _hasTriggered = true;
         manager.IncreaseCount(type);
-        sfx.PlayAudio();
+        lyla.PlayTake();
         gameObject.SetActive(false);
         player.ClearInteractable(this);
     }
