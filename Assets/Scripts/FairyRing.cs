@@ -15,6 +15,7 @@ public class FairyRing : MonoBehaviour, IInteractable
     public float waitTime;
     public FirstPersonPlayerController firstPersonPlayerController;
     public Transform startTeleport;
+    public LadyLyla lyla;
 
     [Header("UI")]
     [SerializeField] private string myName;
@@ -40,6 +41,7 @@ public class FairyRing : MonoBehaviour, IInteractable
         teleporting = true;
         ToggleHighlights(true);
         firstPersonPlayerController.Freeze(true);
+        lyla.PlayReaction();
         yield return new WaitForSeconds(waitTime);
         firstPersonPlayerController.TeleportTo(startTeleport, true);
         teleporting = false;
