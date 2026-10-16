@@ -70,5 +70,4 @@ public class MrMori : MonoBehaviour, IInteractable
     {
         return action;
     }
-
 }
