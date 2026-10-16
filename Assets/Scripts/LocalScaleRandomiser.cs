@@ -3,12 +3,18 @@ using UnityEngine;
 
 public class LocalScaleRandomiser : MonoBehaviour
 {
-    [Header("Behavior")]
-    [SerializeField] private bool randomizeOnStart = true;
+    [Header("Behaviour")]
+    [SerializeField] private bool randomiseChildrenOnStart = true;
+
 
     [SerializeField] private Vector2 uniformRange = new Vector2(0.8f, 1.2f);
     [SerializeField] private Vector3 originalLocalScale = Vector3.one;
 
+    private void Start()
+    {
+        if (randomiseChildrenOnStart)
+            RandomizeChildren();
+    }
 
     [ProButton]
     public void RandomizeGameObject()
